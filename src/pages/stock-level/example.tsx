@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { ItemSelector } from "../../components/ItemSelector";
+
+import { ItemSelector } from "@/components/ItemSelector";
 import { Chart } from "@/components/Chart";
 import { Modal } from "@/components/Modal";
 

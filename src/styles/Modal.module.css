@@ -1,7 +1,3 @@
-.wrapper {
-  position: relative;
-}
-
 .shadow {
   background-color: rgb(var(--foreground-rgb));
   display: block;
