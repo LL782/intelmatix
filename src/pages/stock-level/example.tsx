@@ -1,8 +1,8 @@
-import { Inter } from "@next/font/google";
+import { Source_Sans_Pro } from "@next/font/google";
 import Head from "next/head";
 import styles from "@/styles/StockLevel.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
 
 const ExampleStockPage = () => (
   <>
@@ -13,7 +13,7 @@ const ExampleStockPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main className={styles.main}>
-      <h2 className={inter.className}>Let's go</h2>
+      <h2 className={sans.className}>Let's go</h2>
     </main>
   </>
 );
