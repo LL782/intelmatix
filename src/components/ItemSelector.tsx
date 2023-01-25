@@ -1,5 +1,9 @@
+import { Source_Sans_Pro } from "@next/font/google";
+
+const sans = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
+
 export const ItemSelector = () => (
-  <header className="itemSelector">
+  <header className={`${sans.className} itemSelector`}>
     <div className="itemSummary">
       <div className="itemIconSlot"></div>
       <h1 className="itemName">Pickle</h1>

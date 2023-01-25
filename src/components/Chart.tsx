@@ -1,5 +1,9 @@
+import { Source_Sans_Pro } from "@next/font/google";
+
+const sans = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
+
 export const Chart = () => (
-  <section className="stockLevelChart">
+  <section className={`${sans.className} stockLevelChart`}>
     <header className="chartHeader">
       <div className="titleSlot">
         <h2 className="stockLevelTitle">Stock Level</h2>
