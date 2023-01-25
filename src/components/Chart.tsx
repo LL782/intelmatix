@@ -27,11 +27,13 @@ export const Chart = () => (
       <table className="chartTable">
         <caption className="screenReaderOnly">Stock Level for pickles</caption>
         <thead>
-          <td>Stock Type</td>
-          <td>Date</td>
-          <td>Stocks (kg)</td>
-          <td>Demand</td>
-          <td>Day</td>
+          <tr>
+            <th>Stock Type</th>
+            <th>Date</th>
+            <th>Stocks (kg)</th>
+            <th>Demand</th>
+            <th>Day</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
