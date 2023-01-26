@@ -43,7 +43,7 @@ export const ChartBody = () => (
         </tr>
       </tbody>
     </table>
-    <div className="displayOnly yAxis">
+    <div className="screenOnly yAxis">
       <p className="axisLabel">kg</p>
       <ul className="axisUnits">
         <li className="axisUnit">
@@ -64,7 +64,7 @@ export const ChartBody = () => (
         </li>
       </ul>
     </div>
-    <div className="displayOnly xAxis">
+    <div className="screenOnly xAxis">
       <p className="axisLabel">Days</p>
     </div>
   </div>
