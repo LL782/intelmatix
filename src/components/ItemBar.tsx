@@ -1,12 +1,12 @@
 import { Source_Sans_Pro } from "@next/font/google";
 import Image from "next/image";
-import styles from "@/styles/ItemSelector.module.css";
+import styles from "@/styles/ItemBar.module.css";
 
 const reg = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
 const bold = Source_Sans_Pro({ subsets: ["latin"], weight: "600" });
 
-export const ItemSelector = () => (
-  <header className={`${reg.className} ${styles.itemSelector}`}>
+export const ItemBar = () => (
+  <header className={`${reg.className} ${styles.itemBar}`}>
     <div className={styles.itemSummary}>
       <div className={styles.itemIconSlot}>
         <Image alt="Pickle icon" src="/Pickle.svg" fill />

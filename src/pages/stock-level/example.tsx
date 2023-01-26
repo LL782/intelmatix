@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { ItemSelector } from "@/components/ItemSelector";
+import { ItemBar } from "@/components/ItemBar";
 import { Chart } from "@/components/Chart";
 import { Modal } from "@/components/Modal";
 
@@ -13,7 +13,7 @@ const ExampleStockPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Modal>
-      <ItemSelector />
+      <ItemBar />
       <Chart />
     </Modal>
   </>
