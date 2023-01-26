@@ -1,0 +1,25 @@
+.itemSummary {
+  --iconSize: 2.75rem;
+  margin-left: 1rem;
+  position: relative;
+  padding-left: calc(var(--iconSize) + 1.5rem);
+}
+.itemIconSlot {
+  position: absolute;
+  height: var(--iconSize);
+  left: 0;
+  top: 0.25rem;
+  width: var(--iconSize);
+}
+.itemName {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.125rem;
+  font-weight: normal;
+}
+.itemStock {
+  font-size: 0.9rem;
+}
+.maximumStock {
+  opacity: 0.5;
+}
