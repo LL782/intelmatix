@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 .itemSummary {
-  --iconSize: 3rem;
+  --iconSize: 2.75rem;
   margin-left: 1rem;
   position: relative;
   padding-left: calc(var(--iconSize) + 1.5rem);
@@ -22,7 +22,7 @@
 .itemName {
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.125rem;
   font-weight: normal;
 }
 .itemStock {
@@ -31,8 +31,33 @@
 .maximumStock {
   opacity: 0.5;
 }
+
+.itemSelectWrapper {
+  position: relative;
+  padding: 0.125rem 0;
+}
+.itemSelectedOption {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem 4rem 0.5rem 3rem;
+  margin: 0 0 0 2rem;
+  height: calc(100%);
+  display: flex;
+}
 .itemSelect {
-  background-color: #f003;
+  border-radius: 0;
+  border: 0 none;
+  cursor: pointer;
+  appearance: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+}
+.itemOption {
 }
 .itemMenuIcon {
   background-color: #f003;
