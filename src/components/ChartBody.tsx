@@ -3,9 +3,21 @@ import styles from "@/styles/ChartBody.module.css";
 export const ChartBody = () => (
   <div className={styles.chartBody}>
     <div className={styles.chartArea}>
-      <svg className={styles.chartLine + " " + styles.actual}></svg>
-      <svg className={styles.chartLine + " " + styles.projected}></svg>
-      <svg className={styles.chartLine + " " + styles.demand}></svg>
+      <svg
+        className={styles.chartLine + " " + styles.actual}
+        viewBox="0 0 1000 1000"
+      >
+        <polyline points="0,300 330,300" fill="none" stroke="black" />
+      </svg>
+      <svg
+        className={styles.chartLine + " " + styles.projected}
+        viewBox="0 0 1000 1000"
+      >
+        <polyline
+          points="330,300, 340,200 670,200 670,200 680,300 1000,300"
+          fill="none"
+        />
+      </svg>
       <table className={styles.table}>
         <caption className="screenReaderOnly">Stock Level for pickles</caption>
         <thead className={styles.tHead}>

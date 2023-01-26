@@ -1,23 +1,25 @@
 .chartBody {
   margin: 0.5rem auto;
 }
-
 .chartArea {
-  background: white;
   position: relative;
 }
 .chartLine {
-  background: #f003;
   position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 6;
 }
-.chartLine.actual {
-  background: #f003;
+.chartLine polyline {
+  stroke-width: 3;
+  fill: none;
 }
-.chartLine.projected {
-  background: #f003;
+.chartLine.actual polyline {
+  stroke: #000;
 }
-.chartLine.demand {
-  background: #f003;
+.chartLine.projected polyline {
+  stroke: #000d;
+  stroke-dasharray: 5;
 }
 .table {
   background: #f003;
