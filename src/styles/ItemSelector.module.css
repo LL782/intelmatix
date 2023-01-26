@@ -3,24 +3,33 @@
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .itemSummary {
-  background-color: #f003;
+  --iconSize: 3.5rem;
+  margin-left: 1rem;
+  position: relative;
+  padding-left: calc(var(--iconSize) + 1rem);
 }
 .itemIconSlot {
   background-color: #f003;
+  position: absolute;
+  height: var(--iconSize);
+  left: 0;
+  width: var(--iconSize);
 }
 .itemName {
-  background-color: #f003;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
 }
 .itemStock {
-  background-color: #f003;
-}
-.currentStock {
-  background-color: #f003;
+  font-size: 0.9rem;
 }
 .maximumStock {
-  background-color: #f003;
+  opacity: 0.5;
 }
 .itemSelect {
   background-color: #f003;
