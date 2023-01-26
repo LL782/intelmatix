@@ -1,7 +1,4 @@
-import { Source_Sans_Pro } from "@next/font/google";
 import styles from "@/styles/ChartHead.module.css";
-
-const sans = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
 
 export const ChartHead = () => (
   <header className={styles.chartHeader}>

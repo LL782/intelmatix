@@ -1,12 +1,10 @@
-import { Source_Sans_Pro } from "@next/font/google";
 import styles from "@/styles/Chart.module.css";
 import { ChartBody } from "./ChartBody";
 import { ChartHead } from "./ChartHead";
-
-const sans = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
+import { reg } from "./Fonts";
 
 export const Chart = () => (
-  <section className={`${sans.className} ${styles.stockLevelChart}`}>
+  <section className={`${reg.className} ${styles.stockLevelChart}`}>
     <ChartHead />
     <ChartBody />
   </section>

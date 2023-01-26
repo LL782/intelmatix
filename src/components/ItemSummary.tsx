@@ -1,9 +1,6 @@
-import { Source_Sans_Pro } from "@next/font/google";
 import Image from "next/image";
 import styles from "@/styles/ItemSummary.module.css";
-
-const reg = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
-const bold = Source_Sans_Pro({ subsets: ["latin"], weight: "600" });
+import { reg, bold } from "./Fonts";
 
 export const ItemSummary = () => (
   <div className={styles.itemSummary}>

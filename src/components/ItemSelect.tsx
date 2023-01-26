@@ -1,7 +1,5 @@
-import { Source_Sans_Pro } from "@next/font/google";
 import styles from "@/styles/ItemSelect.module.css";
-
-const reg = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
+import { reg } from "./Fonts";
 
 export const ItemSelect = () => (
   <div className={`${reg.className} ${styles.itemSelectWrapper}`}>
