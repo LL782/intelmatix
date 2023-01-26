@@ -1,5 +1,5 @@
 import styles from "@/styles/Modal.module.css";
-import { ScreenReader } from "./ScreenReader";
+import { ScreenReader } from "../ui-palette/ScreenReader";
 interface Props {
   children: React.ReactNode;
 }
