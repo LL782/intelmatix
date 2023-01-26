@@ -1,3 +1,69 @@
 .chartHolder {
   background: #f003;
 }
+.chartLine {
+  background: #f003;
+}
+.chartLine.actual {
+  background: #f003;
+}
+.chartLine.projected {
+  background: #f003;
+}
+.chartLine.demand {
+  background: #f003;
+}
+.table {
+  background: #f003;
+}
+.tHead {
+  background: #f003;
+}
+.headRow {
+  background: #f003;
+}
+.tBody {
+  background: #f003;
+}
+.tBar {
+  background: #f003;
+}
+.valueType {
+  background: #f003;
+}
+.dateValue {
+  background: #f003;
+}
+.stockValue {
+  background: #f003;
+}
+.demandValue {
+  background: #f003;
+}
+.barLabel {
+  background: #f003;
+}
+.yAxis {
+  background: #f003;
+}
+.yAxisLabel {
+  background: #f003;
+}
+.yAxisUnits {
+  background: #f003;
+}
+.axisUnit {
+  background: #f003;
+}
+.unitText {
+  background: #f003;
+}
+.unitGuide {
+  background: #f003;
+}
+.xAxis {
+  background: #f003;
+}
+.xAxisLabel {
+  background: #f003;
+}
