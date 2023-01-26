@@ -7,16 +7,16 @@
   justify-content: space-between;
 }
 .itemSummary {
-  --iconSize: 3.5rem;
+  --iconSize: 3rem;
   margin-left: 1rem;
   position: relative;
-  padding-left: calc(var(--iconSize) + 1rem);
+  padding-left: calc(var(--iconSize) + 1.5rem);
 }
 .itemIconSlot {
-  background-color: #f003;
   position: absolute;
   height: var(--iconSize);
   left: 0;
+  top: 0.25rem;
   width: var(--iconSize);
 }
 .itemName {
