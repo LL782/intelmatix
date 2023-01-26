@@ -1,8 +1,14 @@
-.chartHolder {
-  background: #f003;
+.chartBody {
+  margin: 0.5rem auto;
+}
+
+.chartArea {
+  background: white;
+  position: relative;
 }
 .chartLine {
   background: #f003;
+  position: absolute;
 }
 .chartLine.actual {
   background: #f003;

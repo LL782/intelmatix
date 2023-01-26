@@ -20,7 +20,7 @@
   border: 1px solid rgb(var(--foreground-rgb));
   cursor: pointer;
   display: block;
-  margin: 0 0 1em auto;
+  margin: 0 0 1.5em auto;
   padding: 0.5rem;
   position: relative;
   height: 2rem;
@@ -45,10 +45,5 @@
 }
 
 .children {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f003;
-  padding: 2rem;
+  padding: 0 2rem;
 }
