@@ -3,18 +3,16 @@ import styles from "@/styles/ChartBody.module.css";
 export const ChartBody = () => (
   <div className={styles.chartBody}>
     <div className={styles.chartArea}>
-      <svg
-        className={styles.chartLine + " " + styles.actual}
-        viewBox="0 0 1000 1000"
-      >
-        <polyline points="0,300 333,300" fill="none" stroke="black" />
-      </svg>
-      <svg
-        className={styles.chartLine + " " + styles.projected}
-        viewBox="0 0 1000 1000"
-      >
+      <svg className={styles.chartLines} viewBox="0 0 1000 1000">
         <polyline
-          points="330,300, 336.6,200 670,200 670,200 680,300 1000,300"
+          className={styles.actualLine}
+          points="0,300 333,300"
+          fill="none"
+          stroke="black"
+        />
+        <polyline
+          className={styles.projectedLine}
+          points="330,300, 336.6,400 670,400 670,400 680,500 1000,500"
           fill="none"
         />
       </svg>

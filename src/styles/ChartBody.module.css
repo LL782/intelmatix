@@ -2,14 +2,15 @@
   margin: 0.5rem auto;
   position: relative;
 }
+
 .chartArea {
   position: relative;
   margin-left: 2rem;
   height: 0;
-  padding-top: 100%;
+  padding-top: calc(100% - 2rem);
 }
 
-.chartLine {
+.chartLines {
   position: absolute;
   background: #0f03;
   width: 100%;
@@ -18,14 +19,15 @@
   z-index: 6;
   top: 0;
 }
-.chartLine polyline {
+.actualLine,
+.projectedLine {
   stroke-width: 3;
   fill: none;
 }
-.chartLine.actual polyline {
+.actualLine {
   stroke: #000;
 }
-.chartLine.projected polyline {
+.projectedLine {
   stroke: #000d;
   stroke-dasharray: 5;
 }
@@ -34,10 +36,10 @@
   background: #f003;
   display: block;
   position: absolute;
-  bottom: -1rem;
   width: 100%;
-  height: calc(100% + 3rem);
   display: flex;
+  bottom: 0;
+  height: calc(100%);
 }
 .tBody {
   background: #f003;
@@ -75,13 +77,15 @@
 .barLabel {
   background: #f003;
   height: 1rem;
+  position: absolute;
+  bottom: -1rem;
 }
 .yAxis {
   background: #f003;
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
+  bottom: 2rem;
 }
 .yAxisLabel {
   background: #f003;
@@ -100,7 +104,13 @@
 }
 .xAxis {
   background: #f003;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  height: 1rem;
 }
 .xAxisLabel {
   background: #f003;
+}
+
+.ChartBody_barLabel__uLr3l {
 }
