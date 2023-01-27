@@ -3,6 +3,31 @@ import { bold } from "./Fonts";
 
 export const ChartBody = () => (
   <div className={styles.chartBody}>
+    <div className={styles.yAxis}>
+      <p className={styles.yAxisLegend}>kg</p>
+      <ul className={styles.yAxisGuides}>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>100</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>75</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>50</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>25</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>0</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+      </ul>
+    </div>
     <div className={styles.chartArea}>
       <svg className={styles.chartLines} viewBox="0 0 1000 1000">
         <polyline
@@ -59,33 +84,8 @@ export const ChartBody = () => (
         </tbody>
       </table>
     </div>
-    <div className={styles.yAxis}>
-      <p className={styles.yAxisLegend}>kg</p>
-      <ul className={styles.yAxisGuides}>
-        <li className={styles.yAxisGuide}>
-          <span className={styles.yAxisGuideLabel}>100</span>
-          <i className={styles.yAxisGuideline}></i>
-        </li>
-        <li className={styles.yAxisGuide}>
-          <span className={styles.yAxisGuideLabel}>75</span>
-          <i className={styles.yAxisGuideline}></i>
-        </li>
-        <li className={styles.yAxisGuide}>
-          <span className={styles.yAxisGuideLabel}>50</span>
-          <i className={styles.yAxisGuideline}></i>
-        </li>
-        <li className={styles.yAxisGuide}>
-          <span className={styles.yAxisGuideLabel}>25</span>
-          <i className={styles.yAxisGuideline}></i>
-        </li>
-        <li className={styles.yAxisGuide}>
-          <span className={styles.yAxisGuideLabel}>0</span>
-          <i className={styles.yAxisGuideline}></i>
-        </li>
-      </ul>
-    </div>
     <div className={styles.xAxis}>
-      <p className={styles.xAxisLabel}>Days</p>
+      <p className={styles.xAxisLegend}>Days</p>
     </div>
   </div>
 );

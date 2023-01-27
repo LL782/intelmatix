@@ -2,7 +2,7 @@
   margin: 0.5rem auto;
   position: relative;
   --x-axis-label-space: 2rem;
-  --x-axis-legend-space: 1.5rem;
+  --x-axis-legend-space: 1.75rem;
   --x-axis-total-space: calc(
     var(--x-axis-label-space) + var(--x-axis-legend-space)
   );
@@ -128,12 +128,16 @@ tr.projected .barLabel {
 .xAxis {
   font-size: 0.9em;
   margin-left: var(--y-axis-total-space);
-  margin-top: var(--x-axis-legend-space);
-  height: var(--x-axis-label-space);
+  margin-top: var(--x-axis-label-space);
+  height: var(--x-axis-legend-space);
   line-height: var(--x-axis-label-space);
 }
-.xAxisLabel {
+.xAxisLegend {
   text-align: center;
+  height: var(--x-axis-legend-space);
+  line-height: var(--x-axis-legend-space);
+  margin: 0;
+  font-size: 1.1rem;
 }
 
 .yAxis {
@@ -149,6 +153,7 @@ tr.projected .barLabel {
   bottom: 50%;
   left: calc(var(--y-axis-legend-space) * -1);
   margin: 0;
+  font-size: 1.1rem;
   text-transform: uppercase;
   transform: translate(0, calc(var(--y-axis-legend-space) * -1)) rotate(-90deg);
   text-align: center;
@@ -189,7 +194,7 @@ tr.projected .barLabel {
   z-index: 1;
 }
 .yAxisGuideline {
-  border-top: 1px dotted rgb(var(--chart-bar-light-rgb));
+  border-top: 1px dotted rgba(var(--chart-bar-rgb), 0.4);
   height: 1px;
   left: 0;
   right: 0;
