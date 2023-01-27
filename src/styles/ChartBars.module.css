@@ -1,0 +1,76 @@
+.chartBars {
+  display: block;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  bottom: 0;
+  height: calc(100%);
+}
+.chartBars tbody {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.chartBars tr {
+  --gutter-total: calc(
+    calc(var(--num-chart-bars) - 1) * var(--gutter-percent) * 100%
+  );
+  display: flex;
+  width: calc(calc(100% / var(--num-chart-bars)) - var(--gutter-total));
+  flex-direction: column;
+  height: 100%;
+  justify-content: end;
+  position: relative;
+}
+.valueType,
+.dateValue {
+  position: absolute;
+  height: 1rem;
+  bottom: calc(var(--volume) * 100%);
+  left: 0;
+  height: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.valueType {
+  background: #f003;
+  transform: translateY(-2rem);
+}
+.dateValue {
+  transform: translateY(-1rem);
+}
+.stockValue {
+  text-indent: 999%;
+  overflow: hidden;
+}
+tr.actual .stockValue {
+  background: rgb(var(--chart-bar-light-rgb));
+}
+tr.today .stockValue,
+tr.projected .stockValue {
+  background-image: linear-gradient(
+    rgb(var(--chart-bar-rgb)) 0,
+    rgb(var(--chart-bar-rgb)) 80%,
+    rgba(var(--chart-bar-rgb), 0) 80%
+  );
+  background-position: 50%;
+  background-size: 100px 5px;
+}
+tr.projected .stockValue {
+  opacity: 0.4;
+}
+.barLabel {
+  height: var(--x-axis-label-space);
+  font-size: 0.9rem;
+  line-height: var(--x-axis-label-space);
+  position: absolute;
+  bottom: calc(-1 * var(--x-axis-label-space));
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+tr.actual .barLabel,
+tr.projected .barLabel {
+  opacity: 0.4;
+}

@@ -1,0 +1,61 @@
+.yAxis {
+  position: absolute;
+  left: var(--y-axis-legend-space);
+  right: 0;
+  top: 0;
+  bottom: var(--x-axis-total-space);
+  pointer-events: none;
+}
+.yAxisLegend {
+  position: absolute;
+  bottom: 50%;
+  left: calc(var(--y-axis-legend-space) * -1);
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transform: translate(0, calc(var(--y-axis-legend-space) * -1)) rotate(-90deg);
+  text-align: center;
+  height: var(--y-axis-legend-space);
+  line-height: var(--y-axis-legend-space);
+}
+.yAxisGuides {
+  display: flex;
+  flex-direction: column;
+  height: calc(
+    100% *
+      calc(
+        var(--num-horizontal-guides) / calc(var(--num-horizontal-guides) - 1)
+      )
+  );
+}
+.yAxisGuides,
+.yAxisGuide {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.yAxisGuide {
+  height: 100%;
+}
+.yAxisGuideLabel {
+  background: #fffa;
+  display: block;
+  font-size: 0.9rem;
+  height: 1em;
+  line-height: 1em;
+  margin-bottom: -0.5em;
+  margin-top: -0.5em;
+  position: relative;
+  text-align: right;
+  width: var(--y-axis-label-space);
+  left: -1rem;
+  z-index: 1;
+}
+.yAxisGuideline {
+  border-top: 1px dotted rgba(var(--chart-bar-rgb), 0.4);
+  height: 1px;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+}

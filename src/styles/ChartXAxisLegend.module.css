@@ -1,0 +1,15 @@
+.xAxis {
+  font-size: 0.9em;
+  margin-left: var(--y-axis-total-space);
+  margin-top: var(--x-axis-label-space);
+  height: var(--x-axis-legend-space);
+  line-height: var(--x-axis-label-space);
+}
+
+.xAxisLegend {
+  text-align: center;
+  height: var(--x-axis-legend-space);
+  line-height: var(--x-axis-legend-space);
+  margin: 0;
+  font-size: 1.1rem;
+}
