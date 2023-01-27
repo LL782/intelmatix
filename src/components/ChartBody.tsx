@@ -6,13 +6,13 @@ export const ChartBody = () => (
       <svg className={styles.chartLines} viewBox="0 0 1000 1000">
         <polyline
           className={styles.actualLine}
-          points="0,300 333,300"
+          points="0,0 313,0"
           fill="none"
           stroke="black"
         />
         <polyline
           className={styles.projectedLine}
-          points="330,300, 336.6,400 670,400 670,400 680,500 1000,500"
+          points="313,0, 339,400 663,400 663,400 685,500 1000,500"
           fill="none"
         />
       </svg>
@@ -28,16 +28,16 @@ export const ChartBody = () => (
           </tr>
         </thead>
         <tbody className={styles.tBody}>
-          <tr className={styles.tBar}>
+          <tr className={styles.tBar} style={{ ["--volume" as any]: 1 }}>
             <td className={styles.valueType}>Actual</td>
             <td className={styles.dateValue}>SEP 5th, 2022</td>
-            <td className={styles.stockValue} style={{ height: "70%" }}>
-              70kg
+            <td className={styles.stockValue} style={{ height: "100%" }}>
+              100kg
             </td>
             <td className="screenReaderOnly">30kg</td>
             <td className={styles.barLabel}>Tue</td>
           </tr>
-          <tr className={styles.tBar}>
+          <tr className={styles.tBar} style={{ ["--volume" as any]: 0.6 }}>
             <td className={styles.valueType}>Today</td>
             <td className={styles.dateValue}>SEP 6rd, 2022</td>
             <td className={styles.stockValue} style={{ height: "60%" }}>
@@ -46,7 +46,7 @@ export const ChartBody = () => (
             <td className="screenReaderOnly">20kg</td>
             <td className={styles.barLabel}>Wed</td>
           </tr>
-          <tr className={styles.tBar}>
+          <tr className={styles.tBar} style={{ ["--volume" as any]: 0.5 }}>
             <td className={styles.valueType}>Projected</td>
             <td className={styles.dateValue}>SEP 7th, 2022</td>
             <td className={styles.stockValue} style={{ height: "50%" }}>
