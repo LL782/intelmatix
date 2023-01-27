@@ -1,14 +1,22 @@
 .chartBody {
   margin: 0.5rem auto;
+  position: relative;
 }
 .chartArea {
   position: relative;
+  margin-left: 2rem;
+  height: 0;
+  padding-top: 100%;
 }
+
 .chartLine {
   position: absolute;
+  background: #0f03;
   width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 6;
+  top: 0;
 }
 .chartLine polyline {
   stroke-width: 3;
@@ -21,38 +29,59 @@
   stroke: #000d;
   stroke-dasharray: 5;
 }
+
 .table {
   background: #f003;
-}
-.tHead {
-  background: #f003;
-}
-.headRow {
-  background: #f003;
+  display: block;
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  height: calc(100% + 3rem);
+  display: flex;
 }
 .tBody {
   background: #f003;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 .tBar {
-  background: #f003;
+  background: #00f4;
+  display: flex;
+  width: calc(calc(100% / 3) - 1.5%);
+  flex-direction: column;
+  height: 100%;
+  justify-content: end;
 }
 .valueType {
+  display: block;
+  height: 1rem;
   background: #f003;
 }
 .dateValue {
-  background: #f003;
+  display: block;
+  height: 1rem;
+  background: #f0f1;
+  white-space: nowrap;
 }
 .stockValue {
-  background: #f003;
+  display: block;
+  background: #0003;
 }
 .demandValue {
   background: #f003;
 }
 .barLabel {
   background: #f003;
+  height: 1rem;
 }
 .yAxis {
   background: #f003;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 .yAxisLabel {
   background: #f003;

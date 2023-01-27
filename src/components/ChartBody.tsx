@@ -7,21 +7,21 @@ export const ChartBody = () => (
         className={styles.chartLine + " " + styles.actual}
         viewBox="0 0 1000 1000"
       >
-        <polyline points="0,300 330,300" fill="none" stroke="black" />
+        <polyline points="0,300 333,300" fill="none" stroke="black" />
       </svg>
       <svg
         className={styles.chartLine + " " + styles.projected}
         viewBox="0 0 1000 1000"
       >
         <polyline
-          points="330,300, 340,200 670,200 670,200 680,300 1000,300"
+          points="330,300, 336.6,200 670,200 670,200 680,300 1000,300"
           fill="none"
         />
       </svg>
       <table className={styles.table}>
         <caption className="screenReaderOnly">Stock Level for pickles</caption>
-        <thead className={styles.tHead}>
-          <tr className={styles.headRow}>
+        <thead className="screenReaderOnly">
+          <tr>
             <th>Stock Type</th>
             <th>Date</th>
             <th>Stocks (kg)</th>
@@ -33,22 +33,28 @@ export const ChartBody = () => (
           <tr className={styles.tBar}>
             <td className={styles.valueType}>Actual</td>
             <td className={styles.dateValue}>SEP 5th, 2022</td>
-            <td className={styles.stockValue}>70kg</td>
-            <td className={styles.demandValue}>30kg</td>
+            <td className={styles.stockValue} style={{ height: "70%" }}>
+              70kg
+            </td>
+            <td className="screenReaderOnly">30kg</td>
             <td className={styles.barLabel}>Tue</td>
           </tr>
           <tr className={styles.tBar}>
             <td className={styles.valueType}>Today</td>
             <td className={styles.dateValue}>SEP 6rd, 2022</td>
-            <td className={styles.stockValue}>60kg</td>
-            <td className={styles.demandValue}>20kg</td>
+            <td className={styles.stockValue} style={{ height: "60%" }}>
+              60kg
+            </td>
+            <td className="screenReaderOnly">20kg</td>
             <td className={styles.barLabel}>Wed</td>
           </tr>
           <tr className={styles.tBar}>
             <td className={styles.valueType}>Projected</td>
             <td className={styles.dateValue}>SEP 7th, 2022</td>
-            <td className={styles.stockValue}>50kg</td>
-            <td className={styles.demandValue}>30kg</td>
+            <td className={styles.stockValue} style={{ height: "50%" }}>
+              50kg
+            </td>
+            <td className="screenReaderOnly">30kg</td>
             <td className={styles.barLabel}>Thu</td>
           </tr>
         </tbody>
