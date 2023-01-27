@@ -1,13 +1,26 @@
 .chartBody {
   margin: 0.5rem auto;
   position: relative;
+  --x-axis-label-space: 2rem;
+  --x-axis-legend-space: 1.5rem;
+  --x-axis-total-space: calc(
+    var(--x-axis-label-space) + var(--x-axis-legend-space)
+  );
+  --y-axis-label-space: 1.5rem;
+  --y-axis-legend-space: 2.5rem;
+  --y-axis-total-space: calc(
+    var(--y-axis-label-space) + var(--y-axis-legend-space)
+  );
+  --num-horizontal-guides: 5;
+  --num-chart-bars: 3;
+  --gutter-percent: 0.0075;
 }
 
 .chartArea {
   position: relative;
-  margin-left: 2rem;
+  margin-left: var(--y-axis-total-space);
   height: 0;
-  padding-top: calc(100% - 2rem);
+  padding-top: calc(100% - var(--y-axis-total-space));
 }
 
 .chartLines {
@@ -20,7 +33,7 @@
 }
 .actualLine,
 .projectedLine {
-  stroke-width: 3;
+  stroke-width: 5;
   fill: none;
 }
 .actualLine {
@@ -39,16 +52,18 @@
   bottom: 0;
   height: calc(100%);
 }
-.tBody {
+.table tbody {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-.tBar {
-  background: #00f1;
+.table tr {
+  --gutter-total: calc(
+    calc(var(--num-chart-bars) - 1) * var(--gutter-percent) * 100%
+  );
   display: flex;
-  width: calc(calc(100% / 3) - 1.5%);
+  width: calc(calc(100% / var(--num-chart-bars)) - var(--gutter-total));
   flex-direction: column;
   height: 100%;
   justify-content: end;
@@ -71,50 +86,113 @@
 .dateValue {
   transform: translateY(-1rem);
 }
+
 .stockValue {
-  display: block;
-  background: #0003;
-}
-.demandValue {
-  background: #f003;
-}
-.barLabel {
-  background: #f003;
-  height: 1rem;
-  position: absolute;
-  bottom: -1rem;
-}
-.yAxis {
-  background: #f003;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 2rem;
-}
-.yAxisLabel {
-  background: #f003;
-}
-.yAxisUnits {
-  background: #f003;
-}
-.axisUnit {
-  background: #f003;
-}
-.unitText {
-  background: #f003;
-}
-.unitGuide {
-  background: #f003;
-}
-.xAxis {
-  background: #f003;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  height: 1rem;
-}
-.xAxisLabel {
-  background: #f003;
+  text-indent: 999%;
+  overflow: hidden;
 }
 
-.ChartBody_barLabel__uLr3l {
+tr.actual .stockValue {
+  background: rgb(var(--chart-bar-light-rgb));
+}
+tr.today .stockValue,
+tr.projected .stockValue {
+  background-image: linear-gradient(
+    rgb(var(--chart-bar-rgb)) 0,
+    rgb(var(--chart-bar-rgb)) 80%,
+    rgba(var(--chart-bar-rgb), 0) 80%
+  );
+  background-position: 50%;
+  background-size: 100px 5px;
+}
+tr.projected .stockValue {
+  opacity: 0.4;
+}
+
+.barLabel {
+  height: var(--x-axis-label-space);
+  font-size: 0.9rem;
+  line-height: var(--x-axis-label-space);
+  position: absolute;
+  bottom: calc(-1 * var(--x-axis-label-space));
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+tr.actual .barLabel,
+tr.projected .barLabel {
+  opacity: 0.4;
+}
+
+.xAxis {
+  font-size: 0.9em;
+  margin-left: var(--y-axis-total-space);
+  margin-top: var(--x-axis-legend-space);
+  height: var(--x-axis-label-space);
+  line-height: var(--x-axis-label-space);
+}
+.xAxisLabel {
+  text-align: center;
+}
+
+.yAxis {
+  position: absolute;
+  left: var(--y-axis-legend-space);
+  right: 0;
+  top: 0;
+  bottom: var(--x-axis-total-space);
+  pointer-events: none;
+}
+.yAxisLegend {
+  position: absolute;
+  bottom: 50%;
+  left: calc(var(--y-axis-legend-space) * -1);
+  margin: 0;
+  text-transform: uppercase;
+  transform: translate(0, calc(var(--y-axis-legend-space) * -1)) rotate(-90deg);
+  text-align: center;
+  height: var(--y-axis-legend-space);
+  line-height: var(--y-axis-legend-space);
+}
+.yAxisGuides {
+  display: flex;
+  flex-direction: column;
+  height: calc(
+    100% *
+      calc(
+        var(--num-horizontal-guides) / calc(var(--num-horizontal-guides) - 1)
+      )
+  );
+}
+.yAxisGuides,
+.yAxisGuide {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.yAxisGuide {
+  height: 100%;
+}
+.yAxisGuideLabel {
+  background: #fffa;
+  display: block;
+  font-size: 0.9rem;
+  height: 1em;
+  line-height: 1em;
+  margin-bottom: -0.5em;
+  margin-top: -0.5em;
+  position: relative;
+  text-align: right;
+  width: var(--y-axis-label-space);
+  left: -1rem;
+  z-index: 1;
+}
+.yAxisGuideline {
+  border-top: 1px dotted rgb(var(--chart-bar-light-rgb));
+  height: 1px;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
 }

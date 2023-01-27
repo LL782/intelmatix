@@ -4,6 +4,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   --keyline-hex: #e6e5e4;
+  --chart-bar-rgb: 164, 164, 164;
+  --chart-bar-light-rgb: 218, 218, 218;
 }
 
 * {
@@ -35,10 +37,4 @@ a {
   height: 1px;
   width: 1px;
   margin: 0 -1px -1px 0;
-}
-
-@media print {
-  .screenOnly {
-    display: none;
-  }
 }

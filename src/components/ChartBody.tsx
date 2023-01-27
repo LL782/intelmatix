@@ -1,4 +1,5 @@
 import styles from "@/styles/ChartBody.module.css";
+import { bold } from "./Fonts";
 
 export const ChartBody = () => (
   <div className={styles.chartBody}>
@@ -28,7 +29,7 @@ export const ChartBody = () => (
           </tr>
         </thead>
         <tbody className={styles.tBody}>
-          <tr className={styles.tBar} style={{ ["--volume" as any]: 1 }}>
+          <tr className={styles.actual} style={{ ["--volume" as any]: 1 }}>
             <td className={styles.valueType}>Actual</td>
             <td className={styles.dateValue}>SEP 5th, 2022</td>
             <td className={styles.stockValue} style={{ height: "100%" }}>
@@ -37,16 +38,16 @@ export const ChartBody = () => (
             <td className="screenReaderOnly">30kg</td>
             <td className={styles.barLabel}>Tue</td>
           </tr>
-          <tr className={styles.tBar} style={{ ["--volume" as any]: 0.6 }}>
+          <tr className={styles.today} style={{ ["--volume" as any]: 0.6 }}>
             <td className={styles.valueType}>Today</td>
             <td className={styles.dateValue}>SEP 6rd, 2022</td>
             <td className={styles.stockValue} style={{ height: "60%" }}>
               60kg
             </td>
             <td className="screenReaderOnly">20kg</td>
-            <td className={styles.barLabel}>Wed</td>
+            <td className={bold.className + " " + styles.barLabel}>Wed</td>
           </tr>
-          <tr className={styles.tBar} style={{ ["--volume" as any]: 0.5 }}>
+          <tr className={styles.projected} style={{ ["--volume" as any]: 0.5 }}>
             <td className={styles.valueType}>Projected</td>
             <td className={styles.dateValue}>SEP 7th, 2022</td>
             <td className={styles.stockValue} style={{ height: "50%" }}>
@@ -58,29 +59,33 @@ export const ChartBody = () => (
         </tbody>
       </table>
     </div>
-    <div className={"screenOnly " + styles.yAxis}>
-      <p className={styles.yAxisLabel}>kg</p>
-      <ul className={styles.yAxisUnits}>
-        <li className={styles.yAxisUnit}>
-          <span className={styles.unitText}>100</span>
-          <i className={styles.unitGuide}></i>
+    <div className={styles.yAxis}>
+      <p className={styles.yAxisLegend}>kg</p>
+      <ul className={styles.yAxisGuides}>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>100</span>
+          <i className={styles.yAxisGuideline}></i>
         </li>
-        <li className={styles.yAxisUnit}>
-          <span className={styles.unitText}>75</span>
-          <i className={styles.unitGuide}></i>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>75</span>
+          <i className={styles.yAxisGuideline}></i>
         </li>
-        <li className={styles.yAxisUnit}>
-          <span className={styles.unitText}>50</span>
-          <i className={styles.unitGuide}></i>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>50</span>
+          <i className={styles.yAxisGuideline}></i>
         </li>
-        <li className={styles.yAxisUnit}>
-          <span className={styles.unitText}>25</span>
-          <i className={styles.unitGuide}></i>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>25</span>
+          <i className={styles.yAxisGuideline}></i>
+        </li>
+        <li className={styles.yAxisGuide}>
+          <span className={styles.yAxisGuideLabel}>0</span>
+          <i className={styles.yAxisGuideline}></i>
         </li>
       </ul>
     </div>
-    <div className={"screenOnly " + styles.xAxis}>
-      <p className={styles.axisLabel}>Days</p>
+    <div className={styles.xAxis}>
+      <p className={styles.xAxisLabel}>Days</p>
     </div>
   </div>
 );
