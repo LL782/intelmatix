@@ -32,7 +32,7 @@ export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
       <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
       <div className={styles.window}>
         <div className={styles.chartArea}>
-          <ChartBars />
+          <ChartBars days={days} unitOfMeasurement={unitOfMeasurement} />
           <ChartLines />
         </div>
       </div>
