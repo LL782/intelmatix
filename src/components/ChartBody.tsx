@@ -7,16 +7,18 @@ import { ChartXAxisLegend } from "./ChartXAxisLegend";
 import useChartVariables from "@/hooks/useChartVariables";
 
 export const ChartBody = () => {
-  const { widthToHeightRatio } = useChartVariables();
-  const numHorizontalGuides = 5;
-  const numChartBars = 3;
-  const gutterPercentage = 0.75;
+  const {
+    widthToHeightRatio,
+    numYAxisGuides,
+    numXAxisBars,
+    xAxisGutterPercentage,
+  } = useChartVariables();
 
   const customStyle = {
     "--widthToHeightRatio": widthToHeightRatio,
-    "--numHorizontalGuides": numHorizontalGuides,
-    "--numChartBars": numChartBars,
-    "--gutterPercentage": gutterPercentage,
+    "--numYAxisGuides": numYAxisGuides,
+    "--numXAxisBars": numXAxisBars,
+    "--xAxisGutterPercentage": xAxisGutterPercentage,
   } as CSSProperties;
 
   return (
