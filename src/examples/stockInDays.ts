@@ -1,10 +1,16 @@
-type StockData = {
+export type StockData = {
+  allItems: Array<{
+    itemName: string;
+    itemId: string;
+    slug: string;
+  }>;
   currentStock: number;
   days: Array<Day>;
-  id: string;
+  itemId: string;
   itemIcon: Icon;
   itemName: string;
   maximumStock: number;
+  slug: string;
   unitOfMeasurement: "kg";
 };
 
@@ -22,6 +28,33 @@ type Icon = {
 };
 
 export const example: StockData = {
+  allItems: [
+    {
+      itemName: "Pickle",
+      itemId: "1234",
+      slug: "pickle",
+    },
+    {
+      itemName: "Cheese",
+      itemId: "2345",
+      slug: "cheese",
+    },
+    {
+      itemName: "Pattie",
+      itemId: "3456",
+      slug: "pattie",
+    },
+    {
+      itemName: "Bun",
+      itemId: "4567",
+      slug: "bun",
+    },
+    {
+      itemName: "Lettuce",
+      itemId: "5678",
+      slug: "lettuce",
+    },
+  ],
   currentStock: 60,
   days: [
     {
@@ -46,12 +79,13 @@ export const example: StockData = {
       formattedWeekDay: "Thu",
     },
   ],
-  id: "#1234",
+  itemId: "1234",
   itemIcon: {
     alt: "Pickle icon",
     src: "/Pickle.svg",
   },
   itemName: "Pickle",
   maximumStock: 150,
+  slug: "pickle",
   unitOfMeasurement: "kg",
 };

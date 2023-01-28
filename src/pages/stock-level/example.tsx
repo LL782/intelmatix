@@ -14,7 +14,7 @@ const ExampleStockPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Modal>
-      <ItemBar item={data} />
+      <ItemBar data={data} />
       <Chart />
     </Modal>
   </>

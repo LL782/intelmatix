@@ -1,26 +1,34 @@
 import styles from "@/styles/ItemSelect.module.css";
 import { reg } from "./Fonts";
+import { StockData } from "@/examples/stockInDays";
 
-export const ItemSelect = () => (
+interface Props {
+  allItems: StockData["allItems"];
+  id: StockData["itemId"];
+  name: StockData["itemName"];
+  slug: StockData["slug"];
+}
+
+export const ItemSelect = ({ allItems, id, name, slug }: Props) => (
   <div className={`${reg.className} ${styles.itemSelectWrapper}`}>
     <div className={styles.itemSelectedOption}>
       <i className={styles.itemMenuIcon}></i>
       <span className={styles.itemMenuText}>
-        <span className={styles.itemMenuName}>Pickle</span> |{" "}
-        <span className={styles.itemMenuId}>#1234</span>
+        <span className={styles.itemMenuName}>{name}</span> |{" "}
+        <span className={styles.itemMenuId}>#{id}</span>
       </span>
     </div>
     <select
       className={styles.itemSelect}
-      defaultValue="Pickle"
+      defaultValue={slug}
       name="itemSelect"
       id="itemSelect"
     >
-      <option value="Pickle">Pickle | #1234</option>
-      <option value="Cheese">Cheese | #2345</option>
-      <option value="Pattie">Pattie | #3456</option>
-      <option value="Bun">Bun | #4567</option>
-      <option value="Lettuce">Lettuce | #5678</option>
+      {allItems.map(({ itemId, itemName, slug }) => (
+        <option key={id} value={slug}>
+          {itemName} | #{itemId}
+        </option>
+      ))}
     </select>
   </div>
 );
