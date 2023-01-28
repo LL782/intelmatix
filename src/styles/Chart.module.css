@@ -15,9 +15,4 @@
   --y-axis-total-space: calc(
     var(--y-axis-label-space) + var(--y-axis-legend-space)
   );
-
-  --numHorizontalGuides: 5;
-  --numChartBars: 3;
-  --gutterPercent: 0.0075;
-  --widthToHeightRatio: 1;
 }
