@@ -3,6 +3,7 @@ import Head from "next/head";
 import { ItemBar } from "@/components/ItemBar";
 import { Chart } from "@/components/Chart";
 import { Modal } from "@/components/Modal";
+import { example as data } from "@/examples/stockInDays";
 
 const ExampleStockPage = () => (
   <>
@@ -13,7 +14,7 @@ const ExampleStockPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Modal>
-      <ItemBar />
+      <ItemBar item={data} />
       <Chart />
     </Modal>
   </>
