@@ -12,13 +12,13 @@ interface Props {
   data: StockData;
 }
 
-export const ChartBody = ({ data }: Props) => {
+export const ChartBody = ({ data: { days } }: Props) => {
   const {
     widthToHeightRatio,
     numYAxisGuides,
     numXAxisBars,
     xAxisGutterPercentage,
-  } = useChartVariables();
+  } = useChartVariables(days);
 
   const customStyle = {
     "--widthToHeightRatio": widthToHeightRatio,

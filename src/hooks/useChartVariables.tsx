@@ -1,8 +1,10 @@
-const useChartVariables = () => {
+import { StockData } from "@/examples/stockInDays";
+
+const useChartVariables = (data: StockData["days"]) => {
   return {
     widthToHeightRatio: 1,
     numYAxisGuides: 5,
-    numXAxisBars: 3,
+    numXAxisBars: data.length,
     xAxisGutterPercentage: 0.75,
   };
 };
