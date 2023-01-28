@@ -1,8 +1,12 @@
 import styles from "@/styles/ChartYAxis.module.css";
 
-export const ChartYAxis = () => (
+interface Props {
+  unitOfMeasurement: string;
+}
+
+export const ChartYAxis = ({ unitOfMeasurement }: Props) => (
   <div className={styles.yAxis}>
-    <p className={styles.yAxisLegend}>KG</p>
+    <p className={styles.yAxisLegend}>{unitOfMeasurement}</p>
     <ul className={styles.yAxisGuides}>
       <li className={styles.yAxisGuide}>
         <span className={styles.yAxisGuideLabel}>100</span>

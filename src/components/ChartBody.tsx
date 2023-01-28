@@ -12,7 +12,7 @@ interface Props {
   data: StockData;
 }
 
-export const ChartBody = ({ data: { days } }: Props) => {
+export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
   const {
     widthToHeightRatio,
     numYAxisGuides,
@@ -29,7 +29,7 @@ export const ChartBody = ({ data: { days } }: Props) => {
 
   return (
     <div className={styles.chartBody} style={customStyle}>
-      <ChartYAxis />
+      <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
       <div className={styles.window}>
         <div className={styles.chartArea}>
           <ChartBars />
