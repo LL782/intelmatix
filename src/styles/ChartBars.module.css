@@ -14,10 +14,10 @@
 }
 .chartBars tr {
   --gutter-total: calc(
-    calc(var(--num-chart-bars) - 1) * var(--gutter-percent) * 100%
+    calc(var(--numChartBars) - 1) * var(--gutterPercent) * 100%
   );
   display: flex;
-  width: calc(calc(100% / var(--num-chart-bars)) - var(--gutter-total));
+  width: calc(calc(100% / var(--numChartBars)) - var(--gutter-total));
   flex-direction: column;
   height: 100%;
   justify-content: end;

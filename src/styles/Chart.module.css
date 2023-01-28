@@ -16,8 +16,8 @@
     var(--y-axis-label-space) + var(--y-axis-legend-space)
   );
 
-  --num-horizontal-guides: 5;
-  --num-chart-bars: 3;
-  --gutter-percent: 0.0075;
+  --numHorizontalGuides: 5;
+  --numChartBars: 3;
+  --gutterPercent: 0.0075;
   --widthToHeightRatio: 1;
 }
