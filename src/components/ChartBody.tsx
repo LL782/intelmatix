@@ -4,9 +4,10 @@ import { ChartYAxis } from "./ChartYAxis";
 import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
+import useChartVariables from "@/hooks/useChartVariables";
 
 export const ChartBody = () => {
-  const widthToHeightRatio = 1;
+  const { widthToHeightRatio } = useChartVariables();
   const numHorizontalGuides = 5;
   const numChartBars = 3;
   const gutterPercentage = 0.75;
