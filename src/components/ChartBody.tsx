@@ -24,9 +24,11 @@ export const ChartBody = () => {
   return (
     <div className={styles.chartBody} style={customStyle}>
       <ChartYAxis />
-      <div className={styles.chartArea}>
-        <ChartBars />
-        <ChartLines />
+      <div className={styles.window}>
+        <div className={styles.chartArea}>
+          <ChartBars />
+          <ChartLines />
+        </div>
       </div>
       <ChartXAxisLegend />
     </div>

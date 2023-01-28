@@ -3,11 +3,18 @@
   position: relative;
 }
 
+.window {
+  overflow: scroll hidden;
+}
+
 .chartArea {
+  --min-width: 640px;
   position: relative;
   margin-left: var(--y-axis-total-space);
   height: 0;
   padding-top: calc(
     calc(var(--widthToHeightRatio) * 100%) - var(--y-axis-total-space)
   );
+  min-width: var(--min-width);
+  min-height: calc(var(--min-width) * var(--widthToHeightRatio));
 }
