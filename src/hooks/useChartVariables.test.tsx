@@ -1,8 +1,8 @@
-import { useChartVariables } from "./useChartVariables";
+import useChartVariables from "./useChartVariables";
 
 describe("useChartVariables", () => {
   test("shares the width-to-height ratio of the chart", () => {
-    const { widthToHeight } = useChartVariables();
-    expect(widthToHeight).toBeDefined();
+    const { widthToHeightRatio } = useChartVariables();
+    expect(widthToHeightRatio).toBeDefined();
   });
 });

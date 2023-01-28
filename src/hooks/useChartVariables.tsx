@@ -1,3 +1,5 @@
-export const useChartVariables = () => {
-  return { widthToHeight: 1 };
+const useChartVariables = () => {
+  return { widthToHeightRatio: 1 };
 };
+
+export default useChartVariables;
