@@ -9,13 +9,13 @@ export const ChartBody = () => {
   const widthToHeightRatio = 1;
   const numHorizontalGuides = 5;
   const numChartBars = 3;
-  const gutterPercent = 0.0075;
+  const gutterPercentage = 0.75;
 
   const customStyle = {
     "--widthToHeightRatio": widthToHeightRatio,
     "--numHorizontalGuides": numHorizontalGuides,
     "--numChartBars": numChartBars,
-    "--gutterPercent": gutterPercent,
+    "--gutterPercentage": gutterPercentage,
   } as CSSProperties;
 
   return (

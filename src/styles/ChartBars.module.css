@@ -14,7 +14,7 @@
 }
 .chartBars tr {
   --gutter-total: calc(
-    calc(var(--numChartBars) - 1) * var(--gutterPercent) * 100%
+    calc(var(--numChartBars) - 1) * var(--gutterPercentage) * 1%
   );
   display: flex;
   width: calc(calc(100% / var(--numChartBars)) - var(--gutter-total));
