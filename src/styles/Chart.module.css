@@ -3,4 +3,21 @@
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
+
+  --x-axis-label-space: 2rem;
+  --x-axis-legend-space: 1.75rem;
+  --x-axis-total-space: calc(
+    var(--x-axis-label-space) + var(--x-axis-legend-space)
+  );
+
+  --y-axis-label-space: 1.5rem;
+  --y-axis-legend-space: 2.5rem;
+  --y-axis-total-space: calc(
+    var(--y-axis-label-space) + var(--y-axis-legend-space)
+  );
+
+  --num-horizontal-guides: 5;
+  --num-chart-bars: 3;
+  --gutter-percent: 0.0075;
+  --widthToHeightRatio: 1;
 }
