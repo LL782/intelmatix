@@ -8,14 +8,14 @@ import { example as data } from "@/examples/stockInDays";
 const ExampleStockPage = () => (
   <>
     <Head>
-      <title>Stock Control - Example - Intelmatix x LL782</title>
+      <title>Stock Control - {data.itemName} - Intelmatix x LL782</title>
       <meta name="description" content="Example application" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Modal>
       <ItemBar data={data} />
-      <Chart />
+      <Chart data={data} />
     </Modal>
   </>
 );

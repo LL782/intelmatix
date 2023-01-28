@@ -6,8 +6,13 @@ import { ChartYAxis } from "./ChartYAxis";
 import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
+import { StockData } from "@/examples/stockInDays";
 
-export const ChartBody = () => {
+interface Props {
+  data: StockData;
+}
+
+export const ChartBody = ({ data }: Props) => {
   const {
     widthToHeightRatio,
     numYAxisGuides,
