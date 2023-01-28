@@ -38,13 +38,14 @@
   height: 100%;
 }
 .yAxisGuideLabel {
-  background: #fffa;
+  background: #fff;
   display: block;
   font-size: 0.9rem;
   height: 1em;
   line-height: 1em;
   margin-bottom: -0.5em;
   margin-top: -0.5em;
+  opacity: 0.6;
   position: relative;
   text-align: right;
   width: var(--y-axis-label-space);
