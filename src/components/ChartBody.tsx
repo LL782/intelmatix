@@ -1,10 +1,11 @@
 import { CSSProperties } from "react";
 import styles from "@/styles/ChartBody.module.css";
+import useChartVariables from "@/hooks/useChartVariables";
+
 import { ChartYAxis } from "./ChartYAxis";
 import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
-import useChartVariables from "@/hooks/useChartVariables";
 
 export const ChartBody = () => {
   const {
