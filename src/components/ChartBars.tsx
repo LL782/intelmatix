@@ -1,10 +1,10 @@
 import styles from "@/styles/ChartBars.module.css";
 import { bold } from "./Fonts";
 import { StockData } from "@/examples/stockInDays";
-import { type } from "os";
+import { ChartDay } from "../examples/chartDays";
 
 interface Props {
-  days: StockData["days"];
+  days: ChartDay[];
   unitOfMeasurement: string;
 }
 
@@ -23,31 +23,21 @@ export const ChartBars = ({ days, unitOfMeasurement }: Props) => (
   </table>
 );
 
-const mapDayToRow = ({
-  demand,
-  formattedDate,
-  formattedWeekDay,
-  stock,
-  type,
-}: StockData["days"][0]) => {
-  const rowStyle = styles[type.toLowerCase()];
-
-  return (
-    <tr
-      className={rowStyle}
-      key={formattedDate}
-      style={{ ["--volume" as any]: 1 }}
-    >
-      <td className={styles.valueType}>Actual</td>
-      <td className={styles.dateValue}>SEP 5th, 2022</td>
-      <td className={styles.stockValue} style={{ height: "100%" }}>
-        100kg
-      </td>
-      <td className="screenReaderOnly">30kg</td>
-      <td className={styles.barLabel}>Tue</td>
-    </tr>
-  );
-};
+const mapDayToRow = ({ formatted, normalised }: ChartDay) => (
+  <tr
+    className={styles[normalised.type]}
+    key={formatted.date}
+    style={{ ["--volume" as any]: normalised.stock }}
+  >
+    <td className={styles.valueType}>Actual</td>
+    <td className={styles.dateValue}>SEP 5th, 2022</td>
+    <td className={styles.stockValue} style={{ height: "100%" }}>
+      100kg
+    </td>
+    <td className="screenReaderOnly">30kg</td>
+    <td className={styles.barLabel}>Tue</td>
+  </tr>
+);
 
 /*
       <tr className={styles.actual} style={{ ["--volume" as any]: 1 }}>

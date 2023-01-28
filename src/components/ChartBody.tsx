@@ -14,6 +14,7 @@ interface Props {
 
 export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
   const {
+    chartDays,
     widthToHeightRatio,
     numYAxisGuides,
     numXAxisBars,
@@ -32,7 +33,7 @@ export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
       <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
       <div className={styles.window}>
         <div className={styles.chartArea}>
-          <ChartBars days={days} unitOfMeasurement={unitOfMeasurement} />
+          <ChartBars days={chartDays} unitOfMeasurement={unitOfMeasurement} />
           <ChartLines />
         </div>
       </div>
