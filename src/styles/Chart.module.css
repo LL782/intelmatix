@@ -10,7 +10,7 @@
     var(--x-axis-label-space) + var(--x-axis-legend-space)
   );
 
-  --y-axis-label-space: 1.5rem;
+  --y-axis-label-space: 2rem;
   --y-axis-legend-space: 2.5rem;
   --y-axis-total-space: calc(
     var(--y-axis-label-space) + var(--y-axis-legend-space)

@@ -47,7 +47,7 @@
   position: relative;
   text-align: right;
   width: var(--y-axis-label-space);
-  left: -1rem;
+  left: -1.5rem;
   z-index: 1;
 }
 .yAxisGuideline {
