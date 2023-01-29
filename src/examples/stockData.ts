@@ -14,7 +14,7 @@ export type StockData = {
   unitOfMeasurement: "kg";
 };
 
-type Day = {
+export type Day = {
   demand: number;
   formattedDate: string;
   formattedWeekDay: string;
