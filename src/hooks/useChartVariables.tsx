@@ -14,7 +14,7 @@ const useChartVariables = ({ days, unitOfMeasurement }: StockData) => {
         normalised: {
           demand: 0.3,
           stock: 0.5,
-          type: type.toLowerCase(),
+          type: type.toLowerCase() as "actual" | "today" | "projected",
         },
       })
     ),
