@@ -72,28 +72,28 @@ describe("useChartVariables", () => {
           {
             formatted: {
               date: "SEP 7th, 2022",
-              demand: "30kg",
-              stock: "50kg",
+              demand: "60kg",
+              stock: "90kg",
               type: "Projected",
               weekDay: "Thu",
             },
             normalised: {
-              demand: 0.3,
-              stock: 0.5,
+              demand: 0.6,
+              stock: 0.9,
               type: "projected",
             },
           },
           {
             formatted: {
               date: "SEP 6rd, 2022",
-              demand: "20kg",
-              stock: "60kg",
+              demand: "10kg",
+              stock: "30kg",
               type: "Today",
               weekDay: "Wed",
             },
             normalised: {
-              demand: 0.2,
-              stock: 0.6,
+              demand: 0.1,
+              stock: 0.3,
               type: "today",
             },
           },
