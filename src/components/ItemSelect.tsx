@@ -28,7 +28,7 @@ export const ItemSelect = ({ allItems, id, name, slug }: Props) => (
       id="itemSelect"
     >
       {allItems.map(({ itemId, itemName, slug }) => (
-        <option key={id} value={slug}>
+        <option key={itemId} value={slug}>
           {itemName} | #{itemId}
         </option>
       ))}
