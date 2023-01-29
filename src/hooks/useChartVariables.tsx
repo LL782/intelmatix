@@ -1,6 +1,14 @@
 import { StockData } from "@/examples/stockData";
+import { useChartRange } from "./useChartRange";
+import { normaliseValues } from "./normaliseValues";
 
-const useChartVariables = ({ days, unitOfMeasurement }: StockData) => {
+const useChartVariables = ({
+  days,
+  lowestValue,
+  highestValue,
+  unitOfMeasurement,
+}: StockData) => {
+  const range = useChartRange({ min: lowestValue, max: highestValue });
   return {
     chartDays: days.map(
       ({ demand, formattedDate, formattedWeekDay, stock, type }) => ({
@@ -12,8 +20,8 @@ const useChartVariables = ({ days, unitOfMeasurement }: StockData) => {
           weekDay: formattedWeekDay,
         },
         normalised: {
-          demand: 0.3,
-          stock: 0.5,
+          demand: normaliseValues({ range, value: demand }),
+          stock: normaliseValues({ range, value: stock }),
           type: type.toLowerCase() as "actual" | "today" | "projected",
         },
       })

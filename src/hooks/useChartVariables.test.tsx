@@ -62,7 +62,7 @@ describe("useChartVariables", () => {
             formattedWeekDay: "Wed",
           },
         ] as Day[],
-        highestValue: 100,
+        highestValue: 90,
         lowestValue: 10,
         unitOfMeasurement: "kg",
       };
