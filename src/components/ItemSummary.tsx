@@ -10,7 +10,7 @@ export const ItemSummary = ({ item }: { item: StockData }) => {
   const displayMaximum = `${maximumStock}${unitOfMeasurement}`;
 
   return (
-    <div className={styles.itemSummary} data-testId="itemSummary">
+    <div className={styles.itemSummary} data-testid="itemSummary">
       <div className={styles.itemIconSlot}>
         <Image alt={itemIcon.alt} src={itemIcon.src} fill />
       </div>

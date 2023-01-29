@@ -12,7 +12,7 @@ interface Props {
 export const ItemSelect = ({ allItems, id, name, slug }: Props) => (
   <div
     className={`${reg.className} ${styles.itemSelectWrapper}`}
-    data-testId="itemSelect"
+    data-testid="itemSelect"
   >
     <div className={styles.itemSelectedOption}>
       <i className={styles.itemMenuIcon}></i>
