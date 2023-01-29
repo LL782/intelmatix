@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }
 .chartBars tr {
   --gutter-total: calc(
@@ -20,7 +20,7 @@
   width: calc(calc(100% / var(--numXAxisBars)) - var(--gutter-total));
   flex-direction: column;
   height: 100%;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
 }
 .valueType,
@@ -41,6 +41,7 @@
   transform: translateY(-1rem);
 }
 .stockValue {
+  height: calc(var(--volume) * 100%);
   text-indent: 999%;
   overflow: hidden;
 }

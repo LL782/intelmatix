@@ -43,6 +43,15 @@ describe("ChartBars", () => {
           `${DAY.normalised.stock}`
         );
       });
+
+      test("with the date, demand, stock, type and week day of each row formatted", () => {
+        const { date, demand, stock, type, weekDay } = DAY.formatted;
+        expect(within(row).getByText(date)).toBeDefined();
+        expect(within(row).getByText(demand)).toBeDefined();
+        expect(within(row).getByText(stock)).toBeDefined();
+        expect(within(row).getByText(type)).toBeDefined();
+        expect(within(row).getByText(weekDay)).toBeDefined();
+      });
     });
   });
 });
