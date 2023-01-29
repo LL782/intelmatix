@@ -7,6 +7,7 @@ import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
 import { StockData } from "@/examples/stockInDays";
+import { chartDays } from "@/examples/chartDays";
 
 interface Props {
   data: StockData;
@@ -14,7 +15,6 @@ interface Props {
 
 export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
   const {
-    chartDays,
     widthToHeightRatio,
     numYAxisGuides,
     numXAxisBars,
