@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { ChartBody } from "./ChartBody";
 import useChartVariables from "@/hooks/useChartVariables";
-import { example } from "@/examples/stockInDays";
+import { example } from "@/examples/stockData";
 
 jest.mock("@/hooks/useChartVariables");
 const mockHook = jest.mocked<typeof useChartVariables>(useChartVariables);

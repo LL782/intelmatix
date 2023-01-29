@@ -1,9 +1,11 @@
-import { example } from "@/examples/stockInDays";
+import { example as stockData } from "@/examples/stockData";
 import useChartVariables from "./useChartVariables";
+
+const [DAY_0, DAY_1, DAY_2] = stockData.days;
 
 describe("useChartVariables", () => {
   describe("Given three days of data", () => {
-    const result = useChartVariables(example.days);
+    const result = useChartVariables([DAY_0, DAY_1, DAY_2]);
 
     test("shares the number of x-axis bars (3)", () => {
       const { numXAxisBars } = result;
@@ -28,7 +30,7 @@ describe("useChartVariables", () => {
   });
 
   describe("Given two days of data", () => {
-    const result = useChartVariables([example.days[0], example.days[1]]);
+    const result = useChartVariables([DAY_0, DAY_1]);
 
     test("shares the number of x-axis bars (2)", () => {
       const { numXAxisBars } = result;

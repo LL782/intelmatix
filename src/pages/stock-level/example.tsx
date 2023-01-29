@@ -3,7 +3,7 @@ import Head from "next/head";
 import { ItemBar } from "@/components/ItemBar";
 import { Chart } from "@/components/Chart";
 import { Modal } from "@/components/Modal";
-import { example as data } from "@/examples/stockInDays";
+import { example as data } from "@/examples/stockData";
 
 const ExampleStockPage = () => (
   <>

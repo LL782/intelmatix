@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/ItemSummary.module.css";
 import { reg, bold } from "./Fonts";
-import { StockData } from "@/examples/stockInDays";
+import { StockData } from "@/examples/stockData";
 
 export const ItemSummary = ({ item }: { item: StockData }) => {
   const { itemIcon, itemName, currentStock, maximumStock, unitOfMeasurement } =

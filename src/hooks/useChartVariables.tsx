@@ -1,4 +1,4 @@
-import { StockData } from "@/examples/stockInDays";
+import { StockData } from "@/examples/stockData";
 
 const useChartVariables = (data: StockData["days"]) => {
   return {

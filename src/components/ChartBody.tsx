@@ -6,7 +6,7 @@ import { ChartYAxis } from "./ChartYAxis";
 import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
-import { StockData } from "@/examples/stockInDays";
+import { StockData } from "@/examples/stockData";
 import { example } from "@/examples/chartDays";
 
 interface Props {
