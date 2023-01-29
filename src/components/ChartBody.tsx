@@ -7,7 +7,7 @@ import { ChartBars } from "./ChartBars";
 import { ChartLines } from "./ChartLines";
 import { ChartXAxisLegend } from "./ChartXAxisLegend";
 import { StockData } from "@/examples/stockInDays";
-import { chartDays } from "@/examples/chartDays";
+import { example } from "@/examples/chartDays";
 
 interface Props {
   data: StockData;
@@ -33,7 +33,7 @@ export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
       <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
       <div className={styles.window}>
         <div className={styles.chartArea}>
-          <ChartBars days={chartDays} unitOfMeasurement={unitOfMeasurement} />
+          <ChartBars days={example} unitOfMeasurement={unitOfMeasurement} />
           <ChartLines />
         </div>
       </div>

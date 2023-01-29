@@ -1,19 +1,17 @@
 import { render, screen, within } from "@testing-library/react";
 import { ChartBars } from "./ChartBars";
-import { ChartDay, chartDays } from "@/examples/chartDays";
-
-const DAY_ONE = chartDays[0];
-const DAY_TWO = chartDays[1];
-const DAY_THREE = chartDays[2];
+import { example as chartDays } from "@/examples/chartDays";
 
 describe("ChartBars", () => {
   test("given a single day, renders a table with a single row", () => {
-    render(<ChartBars days={[DAY_ONE]} unitOfMeasurement="abc" />);
+    render(<ChartBars days={[chartDays[0]]} unitOfMeasurement="abc" />);
     expect(getRows().length).toBe(1);
   });
 
   test("given two days, renders a table with two rows", () => {
-    render(<ChartBars days={[DAY_ONE, DAY_TWO]} unitOfMeasurement="abc" />);
+    render(
+      <ChartBars days={[chartDays[0], chartDays[1]]} unitOfMeasurement="abc" />
+    );
     expect(getRows().length).toBe(2);
   });
 
@@ -21,7 +19,7 @@ describe("ChartBars", () => {
     let rows: HTMLElement[];
     let row: HTMLElement;
     let i = -1;
-    const DAYS = [DAY_ONE, DAY_TWO, DAY_THREE];
+    const DAYS = [chartDays[0], chartDays[1], chartDays[2]];
 
     beforeAll(() => {
       render(<ChartBars days={DAYS} unitOfMeasurement="abc" />);

@@ -1,4 +1,19 @@
-export const chartDays: ChartDay[] = [
+export type ChartDay = {
+  formatted: {
+    date: string;
+    demand: string;
+    stock: string;
+    type: "Actual" | "Today" | "Projected";
+    weekDay: string;
+  };
+  normalised: {
+    demand: number;
+    stock: number;
+    type: "actual" | "today" | "projected";
+  };
+};
+
+export const example: ChartDay[] = [
   {
     formatted: {
       date: "SEP 5th, 2022",
@@ -42,18 +57,3 @@ export const chartDays: ChartDay[] = [
     },
   },
 ];
-
-export type ChartDay = {
-  formatted: {
-    date: string;
-    demand: string;
-    stock: string;
-    type: "Actual" | "Today" | "Projected";
-    weekDay: string;
-  };
-  normalised: {
-    demand: number;
-    stock: number;
-    type: "actual" | "today" | "projected";
-  };
-};
