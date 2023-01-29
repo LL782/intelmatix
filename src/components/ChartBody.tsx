@@ -15,6 +15,7 @@ interface Props {
 
 export const ChartBody = ({ data }: Props) => {
   const { unitOfMeasurement } = data;
+
   const {
     widthToHeightRatio,
     numYAxisGuides,
