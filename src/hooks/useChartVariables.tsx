@@ -1,21 +1,23 @@
 import { StockData } from "@/examples/stockData";
 
-const useChartVariables = ({ days }: StockData) => {
+const useChartVariables = ({ days, unitOfMeasurement }: StockData) => {
   return {
-    chartDays: days.map(({ formattedDate, formattedWeekDay, type }) => ({
-      formatted: {
-        date: formattedDate,
-        demand: "30kg",
-        stock: "50kg",
-        type,
-        weekDay: formattedWeekDay,
-      },
-      normalised: {
-        demand: 0.3,
-        stock: 0.5,
-        type: "projected",
-      },
-    })),
+    chartDays: days.map(
+      ({ demand, formattedDate, formattedWeekDay, stock, type }) => ({
+        formatted: {
+          date: formattedDate,
+          demand: `${demand}${unitOfMeasurement}`,
+          stock: `${stock}${unitOfMeasurement}`,
+          type,
+          weekDay: formattedWeekDay,
+        },
+        normalised: {
+          demand: 0.3,
+          stock: 0.5,
+          type: type.toLowerCase(),
+        },
+      })
+    ),
     widthToHeightRatio: 1,
     numYAxisGuides: 5,
     numXAxisBars: days.length,
