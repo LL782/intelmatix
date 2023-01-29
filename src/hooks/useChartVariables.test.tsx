@@ -6,6 +6,10 @@ import {
 } from "@/examples/stockData";
 import useChartVariables from "./useChartVariables";
 import { renderHook } from "@testing-library/react";
+import {
+  WIDTH_TO_HEIGHT_RATIO,
+  GUTTED_WIDTH_PERCENTAGE,
+} from "@/config/UI_CONSTANTS";
 
 const [DAY_0, DAY_1, DAY_2] = stockData.days;
 
@@ -46,54 +50,62 @@ describe("useChartVariables", () => {
           {
             type: "Projected",
             formattedDate: "SEP 7th, 2022",
-            stock: 50,
-            demand: 30,
+            stock: 90,
+            demand: 60,
             formattedWeekDay: "Thu",
           },
           {
             type: "Today",
             formattedDate: "SEP 6rd, 2022",
-            stock: 60,
-            demand: 20,
+            stock: 30,
+            demand: 10,
             formattedWeekDay: "Wed",
           },
         ] as Day[],
+        highestValue: 100,
+        lowestValue: 10,
         unitOfMeasurement: "kg",
       };
 
-      const expected = [
-        {
-          formatted: {
-            date: "SEP 7th, 2022",
-            demand: "30kg",
-            stock: "50kg",
-            type: "Projected",
-            weekDay: "Thu",
+      const expected = {
+        chartDays: [
+          {
+            formatted: {
+              date: "SEP 7th, 2022",
+              demand: "30kg",
+              stock: "50kg",
+              type: "Projected",
+              weekDay: "Thu",
+            },
+            normalised: {
+              demand: 0.3,
+              stock: 0.5,
+              type: "projected",
+            },
           },
-          normalised: {
-            demand: 0.3,
-            stock: 0.5,
-            type: "projected",
+          {
+            formatted: {
+              date: "SEP 6rd, 2022",
+              demand: "20kg",
+              stock: "60kg",
+              type: "Today",
+              weekDay: "Wed",
+            },
+            normalised: {
+              demand: 0.2,
+              stock: 0.6,
+              type: "today",
+            },
           },
-        },
-        {
-          formatted: {
-            date: "SEP 6rd, 2022",
-            demand: "20kg",
-            stock: "60kg",
-            type: "Today",
-            weekDay: "Wed",
-          },
-          normalised: {
-            demand: 0.2,
-            stock: 0.6,
-            type: "today",
-          },
-        },
-      ];
+        ],
+        numXAxisBars: 2,
+        numYAxisGuides: 10,
+        widthToHeightRatio: WIDTH_TO_HEIGHT_RATIO,
+        xAxisGutterPercentage: GUTTED_WIDTH_PERCENTAGE,
+      };
 
       const { current: result } = getResultFor(input);
-      expect(result.chartDays).toEqual(expected);
+      expect(result).toEqual(expected);
     });
   });
 });

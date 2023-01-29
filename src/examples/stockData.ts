@@ -6,9 +6,11 @@ export type StockData = {
   }>;
   currentStock: number;
   days: Array<Day>;
+  highestValue: number;
   itemId: string;
   itemIcon: Icon;
   itemName: string;
+  lowestValue: number;
   maximumStock: number;
   slug: string;
   unitOfMeasurement: "kg";
@@ -60,7 +62,7 @@ export const example: StockData = {
     {
       type: "Actual",
       formattedDate: "SEP 5th, 2022",
-      stock: 100,
+      stock: 90,
       demand: 30,
       formattedWeekDay: "Tue",
     },
@@ -78,13 +80,22 @@ export const example: StockData = {
       demand: 30,
       formattedWeekDay: "Thu",
     },
+    {
+      type: "Projected",
+      formattedDate: "SEP 8th, 2022",
+      stock: 20,
+      demand: 9,
+      formattedWeekDay: "Fri",
+    },
   ],
+  highestValue: 90,
   itemId: "1234",
   itemIcon: {
     alt: "Pickle icon",
     src: "/Pickle.svg",
   },
   itemName: "Pickle",
+  lowestValue: 0,
   maximumStock: 150,
   slug: "pickle",
   unitOfMeasurement: "kg",
