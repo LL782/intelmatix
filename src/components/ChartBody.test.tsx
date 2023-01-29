@@ -13,6 +13,6 @@ mockHook.mockImplementation(() =>
 describe("ChartBody", () => {
   test("gets chart variables from the hook", () => {
     render(<ChartBody data={example} />);
-    expect(mockHook).toHaveBeenCalledWith(example.days);
+    expect(mockHook).toHaveBeenCalledWith(example);
   });
 });

@@ -13,13 +13,14 @@ interface Props {
   data: StockData;
 }
 
-export const ChartBody = ({ data: { days, unitOfMeasurement } }: Props) => {
+export const ChartBody = ({ data }: Props) => {
+  const { unitOfMeasurement } = data;
   const {
     widthToHeightRatio,
     numYAxisGuides,
     numXAxisBars,
     xAxisGutterPercentage,
-  } = useChartVariables(days);
+  } = useChartVariables(data);
 
   const customStyle = {
     "--widthToHeightRatio": widthToHeightRatio,

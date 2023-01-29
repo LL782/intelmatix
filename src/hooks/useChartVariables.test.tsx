@@ -1,11 +1,18 @@
-import { Day, example as stockData } from "@/examples/stockData";
+import {
+  Day,
+  StockData,
+  example,
+  example as stockData,
+} from "@/examples/stockData";
 import useChartVariables from "./useChartVariables";
+import { renderHook } from "@testing-library/react";
 
 const [DAY_0, DAY_1, DAY_2] = stockData.days;
 
 describe("useChartVariables", () => {
   describe("shares general layout variables:", () => {
-    const result = useChartVariables([DAY_0, DAY_1, DAY_2]);
+    const input = { days: [DAY_0, DAY_1, DAY_2] };
+    const { current: result } = getResultFor(input);
 
     test("the width-to-height ratio of the chart", () => {
       const { widthToHeightRatio } = result;
@@ -27,21 +34,32 @@ describe("useChartVariables", () => {
       [1, [DAY_0], 1],
       [2, [DAY_0, DAY_1], 2],
       [3, [DAY_0, DAY_1, DAY_2], 3],
-    ])("shares the number of x-axis bars (%d)", (expected, input) => {
-      const { numXAxisBars } = useChartVariables(input);
-      expect(numXAxisBars).toBe(expected);
+    ])("shares the number of x-axis bars (%d)", (expected, days) => {
+      const input = { days };
+      const { current } = getResultFor(input);
+      expect(current.numXAxisBars).toBe(expected);
     });
 
     test("converts stock data into values for the charts", () => {
-      const input: Day[] = [
-        {
-          type: "Projected",
-          formattedDate: "SEP 7th, 2022",
-          stock: 50,
-          demand: 30,
-          formattedWeekDay: "Thu",
-        },
-      ];
+      const input: Partial<StockData> = {
+        days: [
+          {
+            type: "Projected",
+            formattedDate: "SEP 7th, 2022",
+            stock: 50,
+            demand: 30,
+            formattedWeekDay: "Thu",
+          },
+          {
+            type: "Today",
+            formattedDate: "SEP 6rd, 2022",
+            stock: 60,
+            demand: 20,
+            formattedWeekDay: "Wed",
+          },
+        ] as Day[],
+        unitOfMeasurement: "kg",
+      };
 
       const expected = [
         {
@@ -58,11 +76,33 @@ describe("useChartVariables", () => {
             type: "projected",
           },
         },
+        {
+          formatted: {
+            date: "SEP 6rd, 2022",
+            demand: "20kg",
+            stock: "60kg",
+            type: "Today",
+            weekDay: "Wed",
+          },
+          normalised: {
+            demand: 0.2,
+            stock: 0.6,
+            type: "today",
+          },
+        },
       ];
 
-      const result = useChartVariables(input);
-
+      const { current: result } = getResultFor(input);
       expect(result.chartDays).toEqual(expected);
     });
   });
 });
+
+function getResultFor(input: Partial<StockData>) {
+  const data = {
+    ...example,
+    ...input,
+  };
+  const { result } = renderHook(useChartVariables, { initialProps: data });
+  return result;
+}
