@@ -1,2 +1,2 @@
-export const WIDTH_TO_HEIGHT_RATIO = 9 / 16;
-export const GUTTER_WIDTH_PERCENTAGE = 2.5;
+export const WIDTH_TO_HEIGHT_RATIO = 320 / 770;
+export const GUTTER_WIDTH_PERCENTAGE = 1;
