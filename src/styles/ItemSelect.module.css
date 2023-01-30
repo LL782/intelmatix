@@ -1,4 +1,5 @@
 .itemSelectWrapper {
+  margin-left: 2rem;
   position: relative;
   padding: 0.125rem 0;
 }
@@ -6,12 +7,11 @@
   border: 1px solid;
   border-radius: 0.5rem;
   padding: 0.5rem 4rem 0.5rem 3rem;
-  margin: 0 0 0 2rem;
   height: calc(100%);
   display: flex;
 }
 .itemSelect {
-  border-radius: 0;
+  border-radius: 0.5rem;
   border: 0 none;
   cursor: pointer;
   appearance: none;
@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
+  width: 100%;
   padding: 0;
 }
 .itemOption {
