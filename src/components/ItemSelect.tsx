@@ -1,6 +1,7 @@
 import styles from "@/styles/ItemSelect.module.css";
 import { reg } from "./Fonts";
 import { StockData } from "@/types/StockData";
+import router from "next/router";
 
 interface Props {
   allItems: StockData["allItems"];
@@ -26,6 +27,7 @@ export const ItemSelect = ({ allItems, id, name, slug }: Props) => (
       defaultValue={slug}
       name="itemSelect"
       id="itemSelect"
+      onChange={({ target: { value } }) => router.push(`/stock-level/${value}`)}
     >
       {allItems.map(({ itemId, itemName, slug }) => (
         <option key={itemId} value={slug}>

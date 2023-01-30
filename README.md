@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser and you'll
 
 ### Work in progress
 
-- [ ] Change routes when changing the dropdown options
+- [x] Change routes when changing the dropdown options
 - [ ] Style the dropdown options
 - [ ] Style the chart head
 
