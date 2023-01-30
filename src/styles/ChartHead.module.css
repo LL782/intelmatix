@@ -8,16 +8,15 @@
   font-weight: normal;
 }
 .descriptionSlot {
-  background: #f003;
   text-align: right;
 }
 .chip {
   background: #fff;
-  line-height: 1.25rem;
-  font-size: 0.75rem;
   margin-bottom: 2rem;
   border: 1px solid;
   border-radius: 1rem;
+  line-height: 1.25rem;
+  font-size: 0.75rem;
   padding: 0.1rem 1rem 0.1rem 0.75rem;
   display: inline-flex;
   align-items: center;
@@ -30,42 +29,36 @@
   margin-right: 0.4rem;
 }
 .chartKey {
-  background: #f003;
   display: flex;
+  list-style: none;
 }
 .keyItem {
-  background: #f003;
-}
-.keyExample {
-  background: #f003;
-}
-.actual {
-  background: #f003;
+  margin: 0 0 0 2rem;
+  display: flex;
+  align-items: center;
 }
 .keyText {
-  background: #f003;
-}
-.keyItem {
-  background: #f003;
+  line-height: 1.25rem;
+  font-size: 0.75rem;
 }
 .keyExample {
-  background: #f003;
+  height: 0.85rem;
+  width: 0.85rem;
+  margin-right: 0.5rem;
 }
-.projected {
-  background: #f003;
+.keyExample.projected {
+  background-image: linear-gradient(
+    rgba(var(--chart-bar-rgb), 0.6) 0,
+    rgba(var(--chart-bar-rgb), 0.6) 85%,
+    rgba(var(--chart-bar-rgb), 0) 85%
+  );
+  background-position: 15%;
+  background-size: 100px 5px;
 }
-.keyText {
-  background: #f003;
+.keyExample.demand {
+  height: 2px;
+  background: rgb(var(--foreground-rgb));
 }
-.keyItem {
-  background: #f003;
-}
-.keyExample {
-  background: #f003;
-}
-.demand {
-  background: #f003;
-}
-.keyText {
-  background: #f003;
+.keyExample.actual {
+  background: rgb(var(--chart-bar-light-rgb));
 }
