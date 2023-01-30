@@ -7,7 +7,7 @@ import { StockData } from "@/types/StockData";
 export const StockPage = ({ data }: { data: StockData }) => (
   <>
     <Head>
-      <title>Stock Control - {data.itemName} - Intelmatix x LL782</title>
+      <title>{`Stock Control - ${data.itemName} - Intelmatix x LL782`}</title>
       <meta name="description" content="Example application" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
