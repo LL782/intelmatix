@@ -99,9 +99,10 @@ describe("useChartVariables", () => {
           },
         ],
         numXAxisBars: 2,
-        numYAxisGuides: 10,
+        numYAxisGuides: 11,
         widthToHeightRatio: WIDTH_TO_HEIGHT_RATIO,
         xAxisGutterPercentage: GUTTED_WIDTH_PERCENTAGE,
+        yAxisGuides: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
       };
 
       const { current: result } = getResultFor(input);

@@ -1,6 +1,7 @@
 import { StockData } from "@/examples/stockData";
 import { useChartRange } from "./useChartRange";
 import { normaliseValues } from "./normaliseValues";
+import { generateYAxisGuides } from "./generateYAxisGuides";
 
 const useChartVariables = ({
   days,
@@ -9,6 +10,8 @@ const useChartVariables = ({
   unitOfMeasurement,
 }: StockData) => {
   const range = useChartRange({ min: lowestValue, max: highestValue });
+  const yAxisGuides = generateYAxisGuides(range);
+
   return {
     chartDays: days.map(
       ({ demand, formattedDate, formattedWeekDay, stock, type }) => ({
@@ -27,9 +30,10 @@ const useChartVariables = ({
       })
     ),
     widthToHeightRatio: 1,
-    numYAxisGuides: 5,
+    numYAxisGuides: yAxisGuides.length,
     numXAxisBars: days.length,
     xAxisGutterPercentage: 0.75,
+    yAxisGuides,
   };
 };
 
