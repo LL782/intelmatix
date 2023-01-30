@@ -3,7 +3,7 @@ import { ChartBody } from "./ChartBody";
 import useChartVariables from "@/hooks/useChartVariables";
 import { example } from "@/examples/stockData";
 import { ChartBars } from "./ChartBars";
-import { ChartDay } from "@/examples/chartDays";
+import { ChartDay } from "@/types/ChartDay";
 import { ChartYAxis } from "./ChartYAxis";
 import { ChartLines } from "./ChartLines";
 

@@ -1,4 +1,4 @@
-import { StockData } from "@/examples/stockData";
+import { StockData } from "@/types/StockData";
 import { useChartRange } from "./useChartRange";
 import { normaliseValues } from "./normaliseValues";
 import { generateYAxisGuides } from "./generateYAxisGuides";

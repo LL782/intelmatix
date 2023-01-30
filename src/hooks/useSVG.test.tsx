@@ -1,6 +1,6 @@
 import { describe } from "node:test";
 import { useSVG } from "./useSVG";
-import { ChartDay } from "@/examples/chartDays";
+import { ChartDay } from "@/types/ChartDay";
 
 const scenarios = [
   {

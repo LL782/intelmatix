@@ -1,4 +1,4 @@
-import { ChartDay } from "@/examples/chartDays";
+import { ChartDay } from "@/types/ChartDay";
 import styles from "@/styles/ChartLines.module.css";
 import { useSVG } from "../hooks/useSVG";
 

@@ -1,7 +1,7 @@
 import styles from "@/styles/ItemBar.module.css";
 import { ItemSummary } from "./ItemSummary";
 import { ItemSelect } from "./ItemSelect";
-import { StockData } from "@/examples/stockData";
+import { StockData } from "@/types/StockData";
 
 export const ItemBar = ({ data }: { data: StockData }) => (
   <header className={styles.itemBar} role="header">

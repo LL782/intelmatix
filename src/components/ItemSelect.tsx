@@ -1,6 +1,6 @@
 import styles from "@/styles/ItemSelect.module.css";
 import { reg } from "./Fonts";
-import { StockData } from "@/examples/stockData";
+import { StockData } from "@/types/StockData";
 
 interface Props {
   allItems: StockData["allItems"];

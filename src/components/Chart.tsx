@@ -2,7 +2,7 @@ import styles from "@/styles/Chart.module.css";
 import { ChartBody } from "./ChartBody";
 import { ChartHead } from "./ChartHead";
 import { reg } from "./Fonts";
-import { StockData } from "@/examples/stockData";
+import { StockData } from "@/types/StockData";
 
 interface Props {
   data: StockData;

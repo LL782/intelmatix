@@ -1,6 +1,6 @@
 import styles from "@/styles/ChartBars.module.css";
 import { bold } from "./Fonts";
-import { ChartDay } from "../examples/chartDays";
+import { ChartDay } from "@/types/ChartDay";
 
 interface Props {
   days: ChartDay[];

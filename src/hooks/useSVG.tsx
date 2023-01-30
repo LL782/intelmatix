@@ -1,4 +1,4 @@
-import { ChartDay } from "@/examples/chartDays";
+import { ChartDay } from "@/types/ChartDay";
 
 interface Props {
   chartDays: ChartDay[];
