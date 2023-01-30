@@ -28,7 +28,17 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-API routes can be accessed on [http://localhost:3000/api/stock](http://localhost:3000/api/stock). This endpoint can be edited in `pages/api/stock.ts`.
+Example UI:
+
+- Pickle [http://localhost:3000/stock-level/pickle](http://localhost:3000/stock-level/pickle)
+- Non-pickle example [http://localhost:3000/stock-level/cheese](http://localhost:3000/stock-level/cheese)
+- Simple example [http://localhost:3000/stock-level/example](http://localhost:3000/stock-level/example)
+
+Example API routes:
+
+- Pickle [http://localhost:3000/api/v1/stock/pickle](http://localhost:3000/api/v1/stock/pickle)
+- Non-pickle example [http://localhost:3000/api/v1/stock/cheese](http://localhost:3000/api/v1/stock/cheese)
+- Simple example [http://localhost:3000/api/v1/stock/example](http://localhost:3000/api/v1/stock/example)
 
 ## Learn More
 
