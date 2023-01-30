@@ -1,33 +1,8 @@
 import { StockData } from "@/types/StockData";
+import { allItems } from "./allItems";
 
 export const pickle: StockData = {
-  allItems: [
-    {
-      itemName: "Pickle",
-      itemId: "1234",
-      slug: "pickle",
-    },
-    {
-      itemName: "Cheese",
-      itemId: "2345",
-      slug: "cheese",
-    },
-    {
-      itemName: "Pattie",
-      itemId: "3456",
-      slug: "pattie",
-    },
-    {
-      itemName: "Bun",
-      itemId: "4567",
-      slug: "bun",
-    },
-    {
-      itemName: "Lettuce",
-      itemId: "5678",
-      slug: "lettuce",
-    },
-  ],
+  allItems,
   currentStock: 60,
   days: [
     {
@@ -55,7 +30,7 @@ export const pickle: StockData = {
       type: "Projected",
       formattedDate: "SEP 8th, 2022",
       stock: 20,
-      demand: 9,
+      demand: 15,
       formattedWeekDay: "Fri",
     },
   ],
@@ -66,7 +41,7 @@ export const pickle: StockData = {
     src: "/Pickle.svg",
   },
   itemName: "Pickle",
-  lowestValue: 0,
+  lowestValue: 15,
   maximumStock: 150,
   slug: "pickle",
   unitOfMeasurement: "kg",
