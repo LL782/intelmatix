@@ -33,7 +33,7 @@ export const pickle: StockData = {
     {
       type: "Actual",
       formattedDate: "SEP 5th, 2022",
-      stock: 90,
+      stock: 52,
       demand: 30,
       formattedWeekDay: "Tue",
     },
@@ -59,7 +59,7 @@ export const pickle: StockData = {
       formattedWeekDay: "Fri",
     },
   ],
-  highestValue: 90,
+  highestValue: 60,
   itemId: "1234",
   itemIcon: {
     alt: "Pickle icon",
