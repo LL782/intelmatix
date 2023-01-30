@@ -14,8 +14,6 @@ export default function handler(
   let data = {};
   let status = 200;
 
-  console.log(example);
-
   switch (item) {
     case "example":
       data = example;
