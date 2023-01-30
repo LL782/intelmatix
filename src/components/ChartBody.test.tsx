@@ -11,7 +11,7 @@ mockHook.mockImplementation(() =>
 );
 
 describe("ChartBody", () => {
-  test("gets chart variables from the hook", () => {
+  test("calls the chart variables hook with the data it receives", () => {
     render(<ChartBody data={example} />);
     expect(mockHook).toHaveBeenCalledWith(example);
   });
