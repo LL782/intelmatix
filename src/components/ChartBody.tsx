@@ -21,6 +21,7 @@ export const ChartBody = ({ data }: Props) => {
     numYAxisGuides,
     numXAxisBars,
     xAxisGutterPercentage,
+    yAxisGuides,
   } = useChartVariables(data);
 
   const customStyle = {
@@ -32,7 +33,10 @@ export const ChartBody = ({ data }: Props) => {
 
   return (
     <div className={styles.chartBody} style={customStyle}>
-      <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
+      <ChartYAxis
+        unitOfMeasurement={unitOfMeasurement}
+        yAxisGuides={yAxisGuides}
+      />
       <div className={styles.chartArea}>
         <ChartBars days={chartDays} unitOfMeasurement={unitOfMeasurement} />
         <ChartLines />
