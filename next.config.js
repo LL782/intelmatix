@@ -6,7 +6,7 @@ const nextConfig = {
       {
         source: "/",
         destination: "/stock-level/pickle",
-        permanent: true,
+        permanent: false,
       },
     ];
   },
