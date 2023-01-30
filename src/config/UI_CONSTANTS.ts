@@ -1,2 +1,2 @@
 export const WIDTH_TO_HEIGHT_RATIO = 1;
-export const GUTTED_WIDTH_PERCENTAGE = 0.75;
+export const GUTTER_WIDTH_PERCENTAGE = 0.75;

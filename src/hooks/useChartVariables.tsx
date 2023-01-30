@@ -3,7 +3,7 @@ import { useChartRange } from "./useChartRange";
 import { normaliseValues } from "./normaliseValues";
 import { generateYAxisGuides } from "./generateYAxisGuides";
 import {
-  GUTTED_WIDTH_PERCENTAGE,
+  GUTTER_WIDTH_PERCENTAGE,
   WIDTH_TO_HEIGHT_RATIO,
 } from "@/config/UI_CONSTANTS";
 
@@ -36,7 +36,7 @@ const useChartVariables = ({
     widthToHeightRatio: WIDTH_TO_HEIGHT_RATIO,
     numYAxisGuides: yAxisGuides.length,
     numXAxisBars: days.length,
-    xAxisGutterPercentage: GUTTED_WIDTH_PERCENTAGE,
+    xAxisGutterPercentage: GUTTER_WIDTH_PERCENTAGE,
     yAxisGuides,
   };
 };

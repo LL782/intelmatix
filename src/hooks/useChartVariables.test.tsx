@@ -8,7 +8,7 @@ import useChartVariables from "./useChartVariables";
 import { renderHook } from "@testing-library/react";
 import {
   WIDTH_TO_HEIGHT_RATIO,
-  GUTTED_WIDTH_PERCENTAGE,
+  GUTTER_WIDTH_PERCENTAGE,
 } from "@/config/UI_CONSTANTS";
 
 const [DAY_0, DAY_1, DAY_2] = stockData.days;
@@ -101,7 +101,7 @@ describe("useChartVariables", () => {
         numXAxisBars: 2,
         numYAxisGuides: 11,
         widthToHeightRatio: WIDTH_TO_HEIGHT_RATIO,
-        xAxisGutterPercentage: GUTTED_WIDTH_PERCENTAGE,
+        xAxisGutterPercentage: GUTTER_WIDTH_PERCENTAGE,
         yAxisGuides: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
       };
 
