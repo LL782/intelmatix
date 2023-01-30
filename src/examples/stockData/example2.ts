@@ -108,7 +108,7 @@ export const example2: StockData = {
   itemId: "9999",
   itemIcon: {
     alt: "Alt icon",
-    src: "/Pickle.svg",
+    src: "/NotPickle.svg",
   },
   itemName: "Not pickle",
   lowestValue: 3.5,
