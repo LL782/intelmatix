@@ -4,7 +4,9 @@ export const ChartHead = () => (
   <header className={`${styles.chartHeader}`}>
     <h2 className={styles.stockLevelTitle}>Stock Level</h2>
     <div className={styles.descriptionSlot}>
-      <h3 className={styles.chip}>Live Marketing Campaign</h3>
+      <h3 className={styles.chip}>
+        <i className={styles.chipDecoration}></i>Live Marketing Campaign
+      </h3>
       <ul className={styles.chartKey}>
         <li className={styles.keyItem}>
           <i className={styles.keyExample + " " + styles.actual}></i>

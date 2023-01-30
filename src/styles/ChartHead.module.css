@@ -9,13 +9,29 @@
 }
 .descriptionSlot {
   background: #f003;
+  text-align: right;
 }
 .chip {
-  background: #f003;
+  background: #fff;
+  line-height: 1.25rem;
+  font-size: 0.75rem;
   margin-bottom: 2rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 0.1rem 1rem 0.1rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0;
+}
+.chipDecoration {
+  height: 0.4rem;
+  width: 0.4rem;
+  background: #dadada;
+  margin-right: 0.4rem;
 }
 .chartKey {
   background: #f003;
+  display: flex;
 }
 .keyItem {
   background: #f003;
