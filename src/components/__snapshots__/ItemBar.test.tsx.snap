@@ -17,7 +17,7 @@ exports[`ItemBar Given example data header contains item select  1`] = `
       <span
         class="itemMenuName"
       >
-        Pickle
+        Example
       </span>
        |
        
@@ -25,7 +25,7 @@ exports[`ItemBar Given example data header contains item select  1`] = `
         class="itemMenuId"
       >
         #
-        1234
+        0000
       </span>
     </span>
   </div>
@@ -50,9 +50,9 @@ exports[`ItemBar Given example data header contains item select  1`] = `
       2345
     </option>
     <option
-      value="pattie"
+      value="patty"
     >
-      Pattie
+      Patty
        | #
       3456
     </option>
@@ -94,7 +94,7 @@ exports[`ItemBar Given example data header contains summary 1`] = `
   <h1
     class="className itemName"
   >
-    Pickle
+    Example
   </h1>
   <p
     class="className itemStock"
