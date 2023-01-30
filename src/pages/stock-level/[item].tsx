@@ -2,6 +2,7 @@ import { StockData } from "@/types/StockData";
 import { StockPage } from "../../components/StockPage";
 import { EXPECTED_ITEMS } from "@/config/expectedItems";
 import Error from "next/error";
+import { getData } from "@/api/getData";
 
 interface Props {
   data: StockData;
@@ -18,13 +19,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
   const { item } = params;
+  const { status, data } = getData(item);
 
-  if (EXPECTED_ITEMS.includes(item) === false) {
+  if (status !== 200) {
     return <Error statusCode={404} />;
   }
-
-  const res = await fetch(`${process.env.API_ROUTES_URL}/stock/${item}`);
-  const data = await res.json();
 
   return { props: { data } };
 }

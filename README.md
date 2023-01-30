@@ -2,11 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-### 1. Set environment variables
-
-Copy `/.env.example` to `.env.local`
-
-### 2. Install dependencies and run dev server
+### Install dependencies and run dev server
 
 ```bash
 npm i
@@ -19,7 +15,7 @@ pnpm i
 pnpm dev
 ```
 
-### 3. Explore the app
+### Explore the app
 
 Open [http://localhost:3000](http://localhost:3000) with your browser and you'll be redirected to the pickle eample
 
