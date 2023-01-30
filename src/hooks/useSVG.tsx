@@ -6,6 +6,14 @@ interface Props {
   aspectRatio: number;
 }
 
+interface DrawHorizontalLine {
+  pointerState: string;
+  actualLine: string;
+  xPointer: number;
+  yPointer: number;
+  projectedLine: string;
+}
+
 const START = 0;
 const X_END = 1000;
 
@@ -14,36 +22,58 @@ export const useSVG = ({
   gutterWidthPercentage,
   aspectRatio,
 }: Props) => {
+  const Y_END = X_END * aspectRatio;
   const numDays = chartDays.length;
-  const numPoints = numDays + 1;
-  const xIncrement = X_END / numDays;
-  const xPoints = [START];
+  let gutterOffset = 0;
+  const totalGutterWidth = (numDays - 1) * gutterOffset;
+  const xIncrement = (X_END - totalGutterWidth) / numDays;
 
   let xPointer = START;
   let yPointer = START;
-  let actualLine = "0,0";
+  let pointerState: string;
+
+  const getY = (demand: number) => (1 - demand) * Y_END;
+
+  let actualLine = `0,${getY(chartDays[0].normalised.demand)}`;
   let projectedLine = "";
 
-  chartDays.forEach(({ normalised: { type, demand } }) => {
-    if (type !== "today") {
-      xPointer += xIncrement;
+  chartDays.forEach(({ normalised: { type, demand } }, index) => {
+    if (pointerState === "actual" && type !== "actual") {
+      pointerState = type;
+      projectedLine += `${xPointer},${yPointer}`;
     }
 
-    yPointer += demand;
+    yPointer = getY(demand);
 
-    if (type === "actual") {
+    if (index === 0) {
+      pointerState = type;
+
+      xPointer = xIncrement - gutterOffset;
+
       actualLine += ` ${xPointer},${yPointer}`;
+      return;
+    }
+
+    const p1 = `${xPointer},${yPointer}`;
+
+    if (chartDays.length === index + 1) {
+      gutterOffset = 0;
+    }
+
+    xPointer += xIncrement - gutterOffset;
+
+    const p2 = `${xPointer},${yPointer}`;
+
+    if (pointerState === "actual") {
+      actualLine += ` ${p1} ${p2}`;
     } else {
-      projectedLine += ` ${xPointer},${yPointer}`;
+      projectedLine += ` ${p1} ${p2}`;
     }
   });
 
-  xPointer += xIncrement;
-  projectedLine += ` ${xPointer},${yPointer}`;
-
   return {
-    viewBox: `${START} ${START} ${X_END} 1000`,
-    actualLine,
+    viewBox: `${START} ${START} ${X_END} ${X_END * aspectRatio}`,
+    actualLine: actualLine.trimStart(),
     projectedLine: projectedLine.trimStart(),
   };
 };
