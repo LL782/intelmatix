@@ -3,12 +3,7 @@
   position: relative;
 }
 
-.window {
-  overflow: scroll hidden;
-}
-
 .chartArea {
-  --min-width: 640px;
   position: relative;
   margin-left: var(--y-axis-total-space);
   height: 0;

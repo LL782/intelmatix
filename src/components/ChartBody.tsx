@@ -17,6 +17,7 @@ export const ChartBody = ({ data }: Props) => {
   const { unitOfMeasurement } = data;
 
   const {
+    chartDays,
     widthToHeightRatio,
     numYAxisGuides,
     numXAxisBars,
@@ -33,11 +34,9 @@ export const ChartBody = ({ data }: Props) => {
   return (
     <div className={styles.chartBody} style={customStyle}>
       <ChartYAxis unitOfMeasurement={unitOfMeasurement} />
-      <div className={styles.window}>
-        <div className={styles.chartArea}>
-          <ChartBars days={example} unitOfMeasurement={unitOfMeasurement} />
-          <ChartLines />
-        </div>
+      <div className={styles.chartArea}>
+        <ChartBars days={example} unitOfMeasurement={unitOfMeasurement} />
+        <ChartLines />
       </div>
       <ChartXAxisLegend />
     </div>
