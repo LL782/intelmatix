@@ -2,6 +2,10 @@ import { StockData } from "@/examples/stockData";
 import { useChartRange } from "./useChartRange";
 import { normaliseValues } from "./normaliseValues";
 import { generateYAxisGuides } from "./generateYAxisGuides";
+import {
+  GUTTED_WIDTH_PERCENTAGE,
+  WIDTH_TO_HEIGHT_RATIO,
+} from "@/config/UI_CONSTANTS";
 
 const useChartVariables = ({
   days,
@@ -29,10 +33,10 @@ const useChartVariables = ({
         },
       })
     ),
-    widthToHeightRatio: 1,
+    widthToHeightRatio: WIDTH_TO_HEIGHT_RATIO,
     numYAxisGuides: yAxisGuides.length,
     numXAxisBars: days.length,
-    xAxisGutterPercentage: 0.75,
+    xAxisGutterPercentage: GUTTED_WIDTH_PERCENTAGE,
     yAxisGuides,
   };
 };
