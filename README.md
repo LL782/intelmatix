@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+
+Deployed to: https://intelmatix-ll782.vercel.app/
 
 ## Getting Started
 
@@ -31,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser and you'll
 ### Work in progress
 
 - [x] Change routes when changing the dropdown options
-- [ ] Style the dropdown options
+- [x] Style the dropdown options
 - [ ] Style the chart head
 
 ### Other ideas I won't have time for
