@@ -1,7 +1,7 @@
 .itemBar {
   border: 1px var(--keyline-hex) solid;
   border-radius: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 2rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
