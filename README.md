@@ -30,13 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser and you'll
 
 ## Issues
 
-### Work in progress
-
-- [x] Change routes when changing the dropdown options
-- [x] Style the dropdown options
-- [ ] Style the chart head
-
-### Other ideas I won't have time for
+### Future considerations
 
 - Add simple e2e tests for happy path and 404
 - Prefer returning simple date strings from API and formatting dates in UI
