@@ -7,5 +7,7 @@
   position: relative;
   margin-left: var(--y-axis-total-space);
   height: 0;
-  padding-top: calc(var(--widthToHeightRatio) * 100%);
+  padding-top: calc(
+    var(--widthToHeightRatio) * calc(100% - var(--y-axis-total-space))
+  );
 }
