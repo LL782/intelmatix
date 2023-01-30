@@ -17,7 +17,7 @@
     calc(var(--numXAxisBars) - 1) * var(--xAxisGutterPercentage) * 1%
   );
   display: flex;
-  width: calc(calc(100% / var(--numXAxisBars)) - var(--gutter-total));
+  width: calc(calc(100% - var(--gutter-total)) / var(--numXAxisBars));
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
