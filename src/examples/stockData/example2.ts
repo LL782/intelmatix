@@ -110,9 +110,9 @@ export const example2: StockData = {
     alt: "Alt icon",
     src: "/Pickle.svg",
   },
-  itemName: "All other examples",
+  itemName: "Not pickle",
   lowestValue: 3.5,
   maximumStock: 150,
-  slug: "pickle",
+  slug: "cheese",
   unitOfMeasurement: "kg",
 };
