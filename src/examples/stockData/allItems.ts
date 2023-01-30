@@ -10,9 +10,9 @@ export const allItems = [
     slug: "cheese",
   },
   {
-    itemName: "Pattie",
+    itemName: "Patty",
     itemId: "3456",
-    slug: "pattie",
+    slug: "patty",
   },
   {
     itemName: "Bun",
