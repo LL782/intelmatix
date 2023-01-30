@@ -5,7 +5,7 @@ import { renderHook } from "@testing-library/react";
 import {
   WIDTH_TO_HEIGHT_RATIO,
   GUTTER_WIDTH_PERCENTAGE,
-} from "@/config/UI_CONSTANTS";
+} from "@/config/uiVariables";
 
 const [DAY_0, DAY_1, DAY_2] = stockData.days;
 

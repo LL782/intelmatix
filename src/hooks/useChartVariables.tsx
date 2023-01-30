@@ -5,7 +5,7 @@ import { generateYAxisGuides } from "./generateYAxisGuides";
 import {
   GUTTER_WIDTH_PERCENTAGE,
   WIDTH_TO_HEIGHT_RATIO,
-} from "@/config/UI_CONSTANTS";
+} from "@/config/uiVariables";
 
 const useChartVariables = ({
   days,

@@ -1,5 +1,6 @@
 import { StockData } from "@/types/StockData";
 import { StockPage } from "../../components/StockPage";
+import { EXPECTED_ITEMS } from "@/config/expectedItems";
 
 interface Props {
   data: StockData;
@@ -7,21 +8,20 @@ interface Props {
 
 const Page = ({ data }: Props) => <StockPage data={data} />;
 
-const expectedPaths = ["example", "pickle"];
-
 export default Page;
 
 export async function getStaticPaths() {
   return {
-    paths: expectedPaths.map((item) => ({ params: { item } })),
+    paths: EXPECTED_ITEMS.map((item) => ({ params: { item } })),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ req, params }: any) {
+export async function getStaticProps({ params }: any) {
   const { item } = params;
   const res = await fetch(`${process.env.API_ROUTES_URL}/stock/${item}`);
   const data = await res.json();
+
   return {
     props: {
       data,
