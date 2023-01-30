@@ -23,6 +23,8 @@ export const ChartBars = ({ days, unitOfMeasurement }: Props) => (
 );
 
 const mapDayToRow = ({ formatted, normalised }: ChartDay) => {
+  const typeClassName = `${styles.valueType} ${bold.className}`;
+  const dateClassName = `${styles.dateValue} ${bold.className}`;
   let labelClassName = styles.barLabel;
 
   if (normalised.type === "today") {
@@ -35,8 +37,8 @@ const mapDayToRow = ({ formatted, normalised }: ChartDay) => {
       key={formatted.date}
       style={{ ["--volume" as any]: normalised.stock }}
     >
-      <td className={styles.valueType}>{formatted.type}</td>
-      <td className={styles.dateValue}>{formatted.date}</td>
+      <td className={typeClassName}>{formatted.type}</td>
+      <td className={dateClassName}>{formatted.date}</td>
       <td className={styles.stockValue}>{formatted.stock}</td>
       <td className="screenReaderOnly">{formatted.demand}</td>
       <td className={labelClassName}>{formatted.weekDay}</td>

@@ -33,12 +33,24 @@
   line-height: 1;
   white-space: nowrap;
 }
+tr.actual .valueType,
+tr.projected .valueType,
+tr.actual .dateValue,
+tr.projected .dateValue {
+  display: none;
+}
+.valueType,
+.dateValue {
+  --line-height: 0.8rem;
+  line-height: var(--line-height);
+  font-size: 0.6rem;
+  padding-left: 0.125rem;
+}
 .valueType {
-  background: #f003;
-  transform: translateY(-2rem);
+  transform: translateY(-1.05rem);
 }
 .dateValue {
-  transform: translateY(-1rem);
+  transform: translateY(-0.25rem);
 }
 .stockValue {
   height: calc(var(--volume) * 100%);
