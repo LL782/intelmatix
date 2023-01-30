@@ -4,6 +4,7 @@ import { ChartDay } from "@/examples/chartDays";
 
 const scenarios = [
   {
+    desc: "outputs coordinates for an SVG",
     input: {
       chartDays: [
         { normalised: { demand: 0, type: "actual" } },
@@ -22,6 +23,7 @@ const scenarios = [
     },
   },
   {
+    desc: "adjusts y-coords based on the aspect ratio",
     input: {
       chartDays: [
         { normalised: { demand: 0, type: "actual" } },
@@ -39,6 +41,7 @@ const scenarios = [
     },
   },
   {
+    desc: "separates actual from projected demand",
     input: {
       chartDays: [
         { normalised: { demand: 0, type: "actual" } },
@@ -55,12 +58,43 @@ const scenarios = [
       projectedLine: "500,500 500,500 750,500 750,500 1000,500",
     },
   },
+  {
+    desc: "offsets points to account for the gutter width",
+    input: {
+      chartDays: [
+        { normalised: { demand: 0, type: "actual" } },
+        { normalised: { demand: 0, type: "actual" } },
+      ] as ChartDay[],
+      gutterWidthPercentage: 5,
+      aspectRatio: 0.5,
+    },
+    output: {
+      viewBox: "0 0 1000 500",
+      actualLine: "0,500 475,500 525,500 1000,500",
+      projectedLine: "",
+    },
+  },
+  {
+    desc: "handles multiple gutters",
+    input: {
+      chartDays: [
+        { normalised: { demand: 0, type: "actual" } },
+        { normalised: { demand: 0, type: "actual" } },
+        { normalised: { demand: 0, type: "actual" } },
+      ] as ChartDay[],
+      gutterWidthPercentage: 5,
+      aspectRatio: 0.5,
+    },
+    output: {
+      viewBox: "0 0 1000 500",
+      actualLine: "0,500 300,500 350,500 650,500 700,500 1000,500",
+      projectedLine: "",
+    },
+  },
 ];
 
 describe("useSVG", () => {
-  describe("provides a coordinates for an SVG with two polylines based on an aspect ratio and normalised chart data", () => {
-    test.each(scenarios)("scenario: %#", ({ input, output }) => {
-      expect(useSVG(input)).toEqual(output);
-    });
+  test.each(scenarios)("$desc", ({ input, output }) => {
+    expect(useSVG(input)).toEqual(output);
   });
 });

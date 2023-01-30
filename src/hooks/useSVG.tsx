@@ -24,10 +24,10 @@ export const useSVG = ({
 }: Props) => {
   const Y_END = X_END * aspectRatio;
   const numDays = chartDays.length;
-  let gutterOffset = 0;
-  const totalGutterWidth = (numDays - 1) * gutterOffset;
+  const gutterWidth = (gutterWidthPercentage / 100) * X_END;
+  let gutterOffset = gutterWidth / 2;
+  const totalGutterWidth = (numDays - 1) * gutterWidth;
   const xIncrement = (X_END - totalGutterWidth) / numDays;
-
   let xPointer = START;
   let yPointer = START;
   let pointerState: string;
@@ -48,11 +48,13 @@ export const useSVG = ({
     if (index === 0) {
       pointerState = type;
 
-      xPointer = xIncrement - gutterOffset;
+      xPointer = xIncrement;
 
       actualLine += ` ${xPointer},${yPointer}`;
       return;
     }
+
+    xPointer += gutterWidth;
 
     const p1 = `${xPointer},${yPointer}`;
 
@@ -60,7 +62,7 @@ export const useSVG = ({
       gutterOffset = 0;
     }
 
-    xPointer += xIncrement - gutterOffset;
+    xPointer += xIncrement;
 
     const p2 = `${xPointer},${yPointer}`;
 
