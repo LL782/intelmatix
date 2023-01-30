@@ -52,10 +52,10 @@ tr.today .stockValue,
 tr.projected .stockValue {
   background-image: linear-gradient(
     rgb(var(--chart-bar-rgb)) 0,
-    rgb(var(--chart-bar-rgb)) 80%,
-    rgba(var(--chart-bar-rgb), 0) 80%
+    rgb(var(--chart-bar-rgb)) 85%,
+    rgba(var(--chart-bar-rgb), 0) 85%
   );
-  background-position: 50%;
+  background-position: 15%;
   background-size: 100px 5px;
 }
 tr.projected .stockValue {
