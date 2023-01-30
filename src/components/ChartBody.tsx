@@ -39,7 +39,11 @@ export const ChartBody = ({ data }: Props) => {
       />
       <div className={styles.chartArea}>
         <ChartBars days={chartDays} unitOfMeasurement={unitOfMeasurement} />
-        <ChartLines />
+        <ChartLines
+          chartDays={chartDays}
+          gutterWidthPercentage={xAxisGutterPercentage}
+          widthToHeightRatio={widthToHeightRatio}
+        />
       </div>
       <ChartXAxisLegend />
     </div>

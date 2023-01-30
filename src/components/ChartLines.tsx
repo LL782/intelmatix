@@ -1,17 +1,37 @@
+import { ChartDay } from "@/examples/chartDays";
 import styles from "@/styles/ChartLines.module.css";
+import { useSVG } from "../hooks/useSVG";
 
-export const ChartLines = () => (
-  <svg className={styles.chartLines} viewBox="0 0 1000 1000">
-    <polyline
-      className={styles.actualLine}
-      points="0,0 313,0"
-      fill="none"
-      stroke="black"
-    />
-    <polyline
-      className={styles.projectedLine}
-      points="313,0, 339,400 663,400 663,400 685,500 1000,500"
-      fill="none"
-    />
-  </svg>
-);
+interface Props {
+  chartDays: ChartDay[];
+  gutterWidthPercentage: number;
+  widthToHeightRatio: number;
+}
+
+export const ChartLines = ({
+  chartDays,
+  gutterWidthPercentage,
+  widthToHeightRatio,
+}: Props) => {
+  const { viewBox, actualLine, projectedLine } = useSVG({
+    chartDays,
+    gutterWidthPercentage,
+    aspectRatio: widthToHeightRatio,
+  });
+
+  return (
+    <svg className={styles.chartLines} viewBox={viewBox}>
+      <polyline
+        className={styles.actualLine}
+        points={actualLine}
+        fill="none"
+        stroke="black"
+      />
+      <polyline
+        className={styles.projectedLine}
+        points={projectedLine}
+        fill="none"
+      />
+    </svg>
+  );
+};
