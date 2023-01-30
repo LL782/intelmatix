@@ -17,10 +17,10 @@ export const ItemSelect = ({ allItems, id, name, slug }: Props) => (
   >
     <div className={styles.itemSelectedOption}>
       <i className={styles.itemMenuIcon}></i>
-      <span className={styles.itemMenuText}>
-        <span className={styles.itemMenuName}>{name}</span> |{" "}
-        <span className={styles.itemMenuId}>#{id}</span>
+      <span className={styles.itemText}>
+        <span>{name}</span> | <span className={styles.itemMenuId}>#{id}</span>
       </span>
+      <i className={styles.cheveron} />
     </div>
     <select
       className={styles.itemSelect}

@@ -3,13 +3,53 @@
   position: relative;
   padding: 0.125rem 0;
 }
+
 .itemSelectedOption {
-  border: 1px solid;
+  align-items: center;
   border-radius: 0.5rem;
-  padding: 0.5rem 4rem 0.5rem 3rem;
-  height: calc(100%);
+  border: 1px solid;
   display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0.5rem 1.25rem;
 }
+.itemText {
+  min-width: 150px;
+}
+.itemMenuIcon,
+.itemMenuIcon:before {
+  content: "";
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid;
+  display: block;
+  height: 0.75rem;
+  margin-right: 1.125rem;
+  position: relative;
+  width: 0.75rem;
+}
+.itemMenuIcon:before {
+  top: -0.5rem;
+  left: -0.5rem;
+}
+.itemMenuIcon {
+  top: 0.25rem;
+  left: 0.25rem;
+}
+.itemMenuId {
+  opacity: 0.4;
+}
+.cheveron {
+  height: 0.85rem;
+  width: 0.85rem;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-radius: 3px 0 0;
+  transform: rotate(225deg);
+  position: relative;
+  top: -0.185rem;
+}
+
 .itemSelect {
   border-radius: 0.5rem;
   border: 0 none;
@@ -22,24 +62,4 @@
   bottom: 0;
   width: 100%;
   padding: 0;
-}
-.itemOption {
-}
-.itemMenuIcon {
-  background-color: #f003;
-}
-.itemMenuText {
-  background-color: #f003;
-}
-.itemMenuName {
-  background-color: #f003;
-}
-.itemMenuId {
-  background-color: #f003;
-}
-.itemMenuDropdown {
-  background-color: #f003;
-}
-.itemMenuDropdownDecoration {
-  background-color: #f003;
 }
