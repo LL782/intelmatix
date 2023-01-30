@@ -1,18 +1,18 @@
 .chartHeader {
-  background: #f003;
-  margin-bottom: 5rem;
-}
-.titleSlot {
-  background: #f003;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .stockLevelTitle {
-  background: #f003;
+  font-size: 2rem;
+  font-weight: normal;
 }
 .descriptionSlot {
   background: #f003;
 }
 .chip {
   background: #f003;
+  margin-bottom: 2rem;
 }
 .chartKey {
   background: #f003;

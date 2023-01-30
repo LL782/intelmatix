@@ -1,7 +1,7 @@
 .stockLevelChart {
   border: 1px var(--keyline-hex) solid;
   border-radius: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 3rem;
   margin-bottom: 1rem;
 
   --x-axis-label-space: 2rem;
