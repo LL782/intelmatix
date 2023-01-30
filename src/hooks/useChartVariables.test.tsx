@@ -1,4 +1,4 @@
-import { example, example as stockData } from "@/examples/stockData";
+import { example, example as stockData } from "@/examples/stockData/example";
 import { Day, StockData } from "@/types/StockData";
 import useChartVariables from "./useChartVariables";
 import { renderHook } from "@testing-library/react";

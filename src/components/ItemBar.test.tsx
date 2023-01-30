@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { ItemBar } from "./ItemBar";
-import { example } from "@/examples/stockData";
+import { example } from "@/examples/stockData/example";
 
 describe("ItemBar", () => {
   describe("Given example data", () => {

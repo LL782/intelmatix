@@ -7,7 +7,7 @@ interface Props {
 
 const Page = ({ data }: Props) => <StockPage data={data} />;
 
-const expectedPaths = ["pickle"];
+const expectedPaths = ["example", "pickle"];
 
 export default Page;
 
@@ -19,10 +19,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ req, params }: any) {
-  const res = await fetch(`${process.env.API_ROUTES_URL}/api/stock/`);
+  const { item } = params;
+  const res = await fetch(`${process.env.API_ROUTES_URL}/stock/${item}`);
   const data = await res.json();
-
   return {
-    props: { data },
+    props: {
+      data,
+    },
   };
 }

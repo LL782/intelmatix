@@ -1,6 +1,6 @@
-import { StockData } from "../types/StockData";
+import { StockData } from "@/types/StockData";
 
-export const example: StockData = {
+export const pickle: StockData = {
   allItems: [
     {
       itemName: "Pickle",
