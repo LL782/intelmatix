@@ -12,15 +12,12 @@ exports[`ItemBar Given example data header contains item select  1`] = `
       class="itemMenuIcon"
     />
     <span
-      class="itemMenuText"
+      class="itemText"
     >
-      <span
-        class="itemMenuName"
-      >
+      <span>
         Example
       </span>
-       |
-       
+       | 
       <span
         class="itemMenuId"
       >
@@ -28,6 +25,9 @@ exports[`ItemBar Given example data header contains item select  1`] = `
         0000
       </span>
     </span>
+    <i
+      class="cheveron"
+    />
   </div>
   <select
     class="itemSelect"
