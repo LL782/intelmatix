@@ -4,7 +4,7 @@ import { ItemSelect } from "./ItemSelect";
 import { StockData } from "@/types/StockData";
 
 export const ItemBar = ({ data }: { data: StockData }) => (
-  <header className={styles.itemBar} role="header">
+  <div className={styles.itemBar} data-testid="itemBar">
     <ItemSummary item={data} />
     <ItemSelect
       allItems={data.allItems}
@@ -12,5 +12,5 @@ export const ItemBar = ({ data }: { data: StockData }) => (
       name={data.itemName}
       slug={data.slug}
     />
-  </header>
+  </div>
 );

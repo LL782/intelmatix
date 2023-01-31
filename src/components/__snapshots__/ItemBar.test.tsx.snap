@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ItemBar Given example data header contains item select  1`] = `
+exports[`ItemBar Given example data ...that contains a summary 1`] = `
+<div
+  class="itemSummary"
+  data-testid="itemSummary"
+>
+  <div
+    class="itemIconSlot"
+  >
+    <img
+      alt="Pickle icon"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      src="/Pickle.svg"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+  </div>
+  <h1
+    class="className itemName"
+  >
+    Example
+  </h1>
+  <p
+    class="className itemStock"
+  >
+    60kg
+    /
+    <span
+      class="maximumStock"
+    >
+      150kg
+    </span>
+  </p>
+</div>
+`;
+
+exports[`ItemBar Given example data the contains the item select  1`] = `
 <div
   class="className itemSelectWrapper"
   data-testid="itemSelect"
@@ -71,41 +107,5 @@ exports[`ItemBar Given example data header contains item select  1`] = `
       5678
     </option>
   </select>
-</div>
-`;
-
-exports[`ItemBar Given example data header contains summary 1`] = `
-<div
-  class="itemSummary"
-  data-testid="itemSummary"
->
-  <div
-    class="itemIconSlot"
-  >
-    <img
-      alt="Pickle icon"
-      data-nimg="fill"
-      decoding="async"
-      loading="lazy"
-      src="/Pickle.svg"
-      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
-    />
-  </div>
-  <h1
-    class="className itemName"
-  >
-    Example
-  </h1>
-  <p
-    class="className itemStock"
-  >
-    60kg
-    /
-    <span
-      class="maximumStock"
-    >
-      150kg
-    </span>
-  </p>
 </div>
 `;

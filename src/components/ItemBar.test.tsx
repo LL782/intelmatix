@@ -7,15 +7,15 @@ describe("ItemBar", () => {
     render(<ItemBar data={example} />);
     let header: HTMLElement;
 
-    test("renders a header", () => {
-      header = screen.getByRole("header");
+    test("renders a component", () => {
+      header = screen.getByTestId("itemBar");
       expect(header).toBeDefined();
     });
-    test("header contains summary", () => {
+    test("...that contains a summary", () => {
       const summary = header.querySelector('[data-testid="itemSummary"]');
       expect(summary).toMatchSnapshot();
     });
-    test("header contains item select ", () => {
+    test("the contains the item select ", () => {
       const select = header.querySelector('[data-testid="itemSelect"]');
       expect(select).toMatchSnapshot();
     });
