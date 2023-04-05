@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+## A coding assessment
 
-Deployed to: https://intelmatix-ll782.vercel.app/
+I wrote this over the course of a weekend as a coding exercise. All feedback is welcome.
+
+It's a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and deployed to: https://pickle-stock-levels.vercel.app/
+
+Interesting points include:
+
+- Genuine TDD - 99% of changes were test driven
+- Micro commits - you should get a lot out of reading each commit in order
+- Homemade SVGs - I wrote my own graph renderer and kept the markup pretty clean
 
 ## Getting Started
 
