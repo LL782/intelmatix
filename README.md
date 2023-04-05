@@ -9,9 +9,11 @@ Deployed to: https://intelmatix-ll782.vercel.app/
 ```bash
 npm i
 npm run dev
+
 # or
 yarn
 yarn dev
+
 # or
 pnpm i
 pnpm dev
